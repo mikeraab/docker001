@@ -16,7 +16,7 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 
 ### Requirements to Complete this HOL:
 
-* A pre-configured Docker-Engine environment - See [Prerequisites](../master/prerequisites.md)
+* A pre-configured Docker-Engine environment - See [Prerequisites](../blob/prerequisites.md)
 
 * Access to the Internet
 
