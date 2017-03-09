@@ -47,10 +47,17 @@ History of Linux Containers
 
 VM vs Container
 
-<img src=images/002-vm-vs-container.png />
-***
 While containers may sound like a virtual machine (VM), the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the **entire guest operating system.**
 
 Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.  
 
+<img src=images/002-vm-vs-container.png />
+***
+
 > *Note - at this time, Windows and Linux containers require that they run on their respective kernel base, therefore, Windows containers cannot run on Linux hosts and vice versa.*
+
+Docker images are a collection of files, which has everthing needed to run the software application inside the container.
+
+<img src=images/004-docker-images.jpg />
+***
+
