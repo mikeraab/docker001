@@ -20,8 +20,6 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 
 * Access to the Internet
 
-* An Oracle Cloud Trial
-
 * A laptop
 
 * A text editor to keep notes and snippets as you go along
