@@ -6,5 +6,5 @@
 7.  Install Docker compose (if needed)
 8.  Create Wordpress stack
 9.  Basics of Persistent storage
-10. Use Github and Docker Hub together to build an Image
-11. Container Cloud Service Demo
+10. Use Github and Docker Hub together to build an Image / Container
+11. Container Cloud Service Demo of Participant's Containers
