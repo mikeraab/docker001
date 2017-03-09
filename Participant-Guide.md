@@ -1,4 +1,4 @@
-# Intro to Containers Hands On Lab
+# Intro to Containers Hands On Lab (DRAFT IN PROGRESS)
 
 This Hands on Lab (HOL) will take the particant through the basics of containerization, explore it's advantages and introduce Docker technology with begginer level excersises.  The topics to be covered in this 2 hour session are:
 
