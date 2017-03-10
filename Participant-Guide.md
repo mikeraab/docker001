@@ -661,10 +661,12 @@ Visit the host’s IP on port 8080 and observe your changes and a new Hello Eart
 Tweet to the world that you have created your own Hello Earth containerized app!
 
 '''
-Check out the Hello Earth Docker application that I just created in my Docker Hub https://hub.docker.com/r/yourname/hello-earth
+Check out the HelloEarth #Docker app that I just created at #OracleCode posted in my Docker Hub https://hub.docker.com/r/yourname/hello-earth
 '''
 
 **Congratulations!**  You have successfully completed this Hands On Lab!
+
+***
 
 ##Demo of Oracle Container Cloud Service Showing Participant's Containers
 
