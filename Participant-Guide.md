@@ -91,3 +91,26 @@ All of this is part of a transformation of technologies along a number of fronts
 
 <img src=images/003-evolution.jpg />
 ***
+
+##Verify Docker Engine Hands on Lab Environment
+
+In this first section you are going to verfify that you are able to connect to your Docker Engine environment.  Please access the environment now, and execute the following commands at the terminal.
+
+First, lets run as root, so that we do not have to preface everthing with sudo.
+
+```
+$ sudo -s
+```
+
+Now, here is the Docker specific command to check what version is installed.
+
+```
+$ docker version
+```
+
+You should see an output of something like this.
+
+```
+Docker version 1.1x.x, build 57bf6fd
+```
+
