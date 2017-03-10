@@ -542,43 +542,32 @@ Copy the Permalink URL of the blog post and keep this in your notes, as you will
 <img src=images/040-view-blog.png />
 ***
 
-Back in OCCS, use the "Stop" button to stope the Wordpress deployment, which will stop each container in an orderly fashion:
+Stop and Remove the running Wordpress and Database containers by using their short id.
 
-<img src=images/041-stop-wp.png />
-***
+Remember this from a previous exercise:
 
-Use the "Remove" button to remove the deployment and remove all containers:
+```
+docker ps -a
 
-<img src=images/042-remove-wp.png />
-***
+docker stop short_id
+
+docker rm short_id
+```
+
+Repeat for next container
 
 Verify in the browser that the Wordpress blog post is gone by refreshing the page:
 
 <img src=images/043-refresh.png />
 ***
 
-Redeploy the Wordpress persistent Stack.  
+Redeploy the Wordpress stack.  
 
-> *Note - if you are on a multi-worker node instance, you will need to set the host constraint like this to ensure that the containers run on the same hosts as before, so they can re-join with the existing host volumes that were created on those hosts.*
+```
+$ ./docker-compose up -d
+```
 
-Within the Deploy options, set the "Host Constraint" for the Wordpress container within the Orchestration for wordpress area:
-
-<img src=images/044-wp-constraint.png />
-***
-
-Then using the "+" icon in the UI, expose the Orchestration for db area and set the "Host Constraint" for the Database container:
-
-<img src=images/045-db-constraint.png />
-***
-
-> *Important - Verify that the Wordpress and Database containers are running and deployed on the **same hosts as before**.  If this is not the case, Stop and Remove the deployment and set the Host constraints again.  The containers must run on the same hosts to reconnect with the existing host volumes.*
-
-Select the "Deploy" button to deploy the Stack:
-
-<img src=images/046-wp-redeploy.png />
-***
-
-Once the Deployment if running, healthy and green, navigate back to the blog post URL that you noted, in your browser and refresh the page:
+navigate back to the blog post URL that you noted, in your browser and refresh the page:
 
 <img src=images/047-refresh-blog.png />
 ***
