@@ -422,7 +422,7 @@ Use an editor or VI to create a file named docker-compose.yml
 vi docker-compose.yml
 ```
 
-that contains the following text:
+that contains the following text **(important, copy and paste from the YAML below)
 
 ```
 version: '2'
@@ -449,8 +449,9 @@ services:
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_PASSWORD: wordpress
-volumes:
-    db_data:
+   volumes:
+     db_data:
+      - /var/www/html:/var/www/html:rw
 ```
 
 Run the Wordpress stack by this command
@@ -484,3 +485,102 @@ docker rm short_id
 Repeat for next container
 
 ## Basics of Persistent storage
+
+ **Understand Docker Volumes
+
+This section will explore data persistence through the use of host data volumes.
+
+A full introduction to Docker volumes is located here: [https://docs.docker.com/engine/tutorials/dockervolumes/](https://docs.docker.com/engine/tutorials/dockervolumes/)
+
+In short, unless a container volume is mounted to a persistent host volume, any data stored within the container will be lost when the container is removed.
+
+So let's explore how data is persisted in the Wordpress stack we just used.
+
+In your browser navigate to Host_IP and append it with the Wordpress initialization URL: /wp-admin/install.php.  
+
+> *Note - this is the same setup URL you saw when we deployed with Docker Compose, however this time, we are going to setup Wordpress and create blog post.*
+
+[http://ip_address/wp-admin/install.php](http://ip_address/wp-admin/install.php)
+
+First, select your language:
+
+<img src=images/033-wp-setup1.png />
+***
+
+Setup the Wordpress login details.  Be sure to keep the Username and Password in your notes:
+
+<img src=images/034-wp-setup2.png />
+***
+
+Click the "log In" button to log into to Wordpress:
+
+<img src=images/034-wp-setup2.png />
+***
+
+Login using the credentials you created earlier:
+
+<img src=images/036-wp-login2.png />
+***
+
+Select "Write your first blog post" in the Next Steps section:
+
+<img src=images/037-write-blog.png />
+***
+
+Create a sample blog post.  Include an image of your choosing, if you would like and click Publish:
+
+<img src=images/038-publish-blog.png />
+***
+
+Click on the "Permalink" to navigate to the blog post:
+
+<img src=images/039-permalink.png />
+***
+
+Copy the Permalink URL of the blog post and keep this in your notes, as you will need it later:
+
+<img src=images/040-view-blog.png />
+***
+
+Back in OCCS, use the "Stop" button to stope the Wordpress deployment, which will stop each container in an orderly fashion:
+
+<img src=images/041-stop-wp.png />
+***
+
+Use the "Remove" button to remove the deployment and remove all containers:
+
+<img src=images/042-remove-wp.png />
+***
+
+Verify in the browser that the Wordpress blog post is gone by refreshing the page:
+
+<img src=images/043-refresh.png />
+***
+
+Redeploy the Wordpress persistent Stack.  
+
+> *Note - if you are on a multi-worker node instance, you will need to set the host constraint like this to ensure that the containers run on the same hosts as before, so they can re-join with the existing host volumes that were created on those hosts.*
+
+Within the Deploy options, set the "Host Constraint" for the Wordpress container within the Orchestration for wordpress area:
+
+<img src=images/044-wp-constraint.png />
+***
+
+Then using the "+" icon in the UI, expose the Orchestration for db area and set the "Host Constraint" for the Database container:
+
+<img src=images/045-db-constraint.png />
+***
+
+> *Important - Verify that the Wordpress and Database containers are running and deployed on the **same hosts as before**.  If this is not the case, Stop and Remove the deployment and set the Host constraints again.  The containers must run on the same hosts to reconnect with the existing host volumes.*
+
+Select the "Deploy" button to deploy the Stack:
+
+<img src=images/046-wp-redeploy.png />
+***
+
+Once the Deployment if running, healthy and green, navigate back to the blog post URL that you noted, in your browser and refresh the page:
+
+<img src=images/047-refresh-blog.png />
+***
+
+The data persisted because it was written to the host volume, and then re-joined to the containers when they were re-deployed on the same hosts.
