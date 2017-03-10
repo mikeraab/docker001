@@ -10,7 +10,7 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 7.  [Install Docker Compose](../master/Participant-Guide.md#install-docker-compose)
 8.  [Create Wordpress "stack"](../master/Participant-Guide.md#create-a-wordpress-stack)
 9.  [Basics of Persistent storage](../master/Participant-Guide.md#basics-of-persistent-storage)
-10. Use Github and Docker Hub together to build an Image and Run the Container
+10. [Use Github and Docker Hub together to build an Image and Run the Container](../master/Participant-Guide.md#use-github-and-docker-hub-together-to-build-an-image-and-run-the-container)
 11. Demo of Oracle Container Cloud Service Showing Participant's Containers
 
 
@@ -657,6 +657,14 @@ Visit the host’s IP on port 8080 and observe your changes and a new Hello Eart
 
 <img src=images/058-hello-earth.png />
 ***
+
+Tweet to the world that you have created your own Hello Earth containerized app!
+
+'''
+Check out the Hello Earth Docker application that I just created in my Docker Hub https://hub.docker.com/r/yourname/hello-earth
+'''
+
+##Demo of Oracle Container Cloud Service Showing Participant's Containers
 
 **Congratulations!**  You have successfully completed this Hands On Lab!
 
