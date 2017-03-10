@@ -672,7 +672,7 @@ Check out running your container in the Oracle Container Cloud Service:
 
 * [Get Started for Free](https://cloud.oracle.com/tryit)
 
-
+***
 
 ## Summary/Recap Pointer to Further Resources
 
