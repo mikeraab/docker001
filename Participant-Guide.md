@@ -11,7 +11,7 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 8.  [Create Wordpress "stack"](../master/Participant-Guide.md#create-a-wordpress-stack)
 9.  [Basics of Persistent storage](../master/Participant-Guide.md#basics-of-persistent-storage)
 10. Use Github and Docker Hub together to build an Image and Run the Container
-11. Demo ofContainer Cloud Service Showing Participant's Containers
+11. Demo of Oracle Container Cloud Service Showing Participant's Containers
 
 
 ### Requirements to Complete this HOL:
@@ -575,3 +575,104 @@ navigate back to the blog post URL that you noted, in your browser and refresh t
 The data persisted because it was written to the host volume, and then re-joined to the containers when they were re-deployed on the same hosts.
 
 ## Use Github and Docker Hub together to build an Image and Run the Container
+
+**Requirements: user account for Github and DockerHub**
+
+> If you do not have a Github account, get a free one here: [https://github.com/join](https://github.com/join) 
+
+Now, you will explore another method of creating a image using GitHub and Docker Hub.
+
+> *Note - in this exercise you will build a Dockerfile from Github on Docker Hub, deploy the latest version, then modify the Index.html in Github to trigger an automated Docker image build in DockerHub, and then verify the new build and image as a running container in.*
+
+**To begin, fork this Github repo to your own
+
+
+**Once you have completed all the steps above, follow these steps:**
+
+In your Github account navigate to the URL where you have forked the above Docker-Hello-World.  Replace your Github username in the below URL.
+
+https://github.com/*username*/docker-images/blob/master/ContainerCloud/images/docker-hello-world/
+
+On the Github page, click on the link for "Index.html":
+
+<img src=images/049-hw-index.png />
+***
+
+This is the HTML for the home page of the HelloWorld Demo from above.  
+
+You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe the changes.
+
+Edit the page via the pencil icon and make these changes:
+
+<img src=images/050-edit-index.png />
+***
+
+On line 8, change the background color to 
+
+```
+black
+```
+
+Add a new line 9 with the text
+
+```
+color: white;
+```
+
+On line 14, edit the H2 header to this, replacing "your_name" and "your_city" with your own name and city
+```
+<h2>Hello Earth from "your_name" at Oracle Code in "your_city"!</h2>
+```
+
+Create a new line after </body> on line 15, and add this line for an image of the earth 
+
+```
+<img src="http://www.freeimageslive.com/galleries/space/earth/pics/a17_h_148_22725.gif">
+```
+
+Check to see that it looks just like this (edits are highlighted in the red boxes):
+
+
+<img src=images/051-index-edit.png />
+***
+
+Scroll Down and Commit your Changes.  Add a description and press the "Commit Changes" button:
+
+<img src=images/052-commit-index.png />
+***
+
+This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in index.html as part of the build process.  
+
+It will take a few minutes for this to complete in Docker Hub.  When it does, Success will be noted in the Status column:
+
+<img src=images/053-docker-build.png />
+***
+
+Back in your Docker environment.
+
+
+Once the container is running, verify the Host that the container is running on: 
+
+Visit the host’s IP on port 8080 and observe your changes and a new Hello Earth!
+
+<img src=images/058-hello-earth.png />
+***
+
+**Congratulations!**  You have successfully completed this Hands On Lab!
+
+## Summary/Recap Pointer to Further Resources
+
+* [Oracle Github](https://github.com/oracle/docker-images)
+
+* [Oracle Container Registry](https://container-registry.oracle.com)
+
+* [Oracle Container Registry Docs](http://docs.oracle.com/en/cloud/iaas/container-cloud/index.html)
+
+Oracle Blogs:
+
+* [Containers, Docker and Microservices](https://community.oracle.com/community/cloud_computing/containers-docker-and-microservices)
+
+* [Container Cloud Service Blog](https://community.oracle.com/community/cloud_computing/infrastructure-as-a-service-iaas/oracle-container-cloud-service)
+
+**DONE**
+
