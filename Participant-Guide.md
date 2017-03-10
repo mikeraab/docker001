@@ -114,5 +114,111 @@ If Docker is installed and running, you should see an output of something like t
 Docker version 1.1x.x, build 57bf6fd
 ```
 
-##Hello Helloworld
+## Hello Helloworld
 
+Run Docker’s Hello-world example
+
+	
+```
+$ docker run hello-world
+```
+
+Since the "hello-world" image is not available locally on the host, the command automatically pulls the hello-world image from the public Docker Hub image repository and runs the container in the foreground.
+
+**Congratulations, you have just run your first Docker container!**
+
+List all containers (- a = running **and** stopped)
+
+```
+$ docker ps -a
+```
+
+Now, you explore Docker images and the Docker Hub
+
+**Browse to another public image Helloworld example on Docker Hub.  Run it.**
+
+Open a browser and go to this URL:
+
+[https://hub.docker.com/r/karthequian/helloworld](https://hub.docker.com/r/karthequian/helloworld)
+
+Pull the image from the Docker Hub Registry
+
+>  *Note - observe how the layers are pulled individually*
+
+```
+$ docker pull karthequian/helloworld:latest
+```
+
+Copy/Paste the Docker Run command from the Docker Hub page and add a -d option so the container runs in "detached" mode (as opposed to the foreground mode in the last exercise).  This frees up your terminal window.
+
+```
+$ docker run -d -p 80:80/tcp "karthequian/helloworld:latest"
+```
+
+Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Host where it is running and note the number of visits.  (The IP is the same as the Host that you are SSH’d into http://host_ip):
+
+
+<img src=images/004-hello-world.png />
+***
+You are now actually using an application that is in the Docker container.  Refresh the browser and observe how the visits counts increments.  This is a live application. A simple example, but an example of the experience of using an application running in a container, which is no different than if it was not running in a container.
+
+> *Makes you wonder about how many apps that you are using on a day to day basis, may indeed be running in a Docker container?*
+
+Now, look at the name that Docker has assigned the Helloworld container that is running.  List all running containers.
+
+```
+$ docker ps
+```
+
+Notice that Docker has assigned a container name, something like "stoic_wilson" in the above?  What name did Docker give your container?  Remember this name, as we will use it in a bit.
+
+> *Note - unless you specify a container name, Docker will assign a similar 2 part name automatically*
+
+## Stop and Re-run Your Container with a More Descriptive Name
+
+Now, go back to the terminal window, stop the container and give it a more descriptive name, so that we could find it easier if there were many containers running.
+
+Stop the Running Container - Replace **your_container** below with an actual name that you want to call your running container.
+
+```
+$ docker stop your_container
+```
+
+Now, remove the container with the "rm" command
+
+```
+$ docker rm your_container
+```
+
+Check to be sure that the container has been removed
+
+```
+$ docker ps -a
+```
+
+> *Note - containers can be stopped and removed by using their name **(if there are no dependent image layers)**, their long id or their short id*
+
+Now run the container with a more descriptive name, such as "helloworld_app"
+
+```
+$ docker run -d --name helloworld_app -p 80:80/tcp "karthequian/helloworld:latest"
+```
+
+List all running containers again
+
+```
+$ docker ps
+```
+
+> *Is the container easier to find now, especially that there is context to the name of the container?  Especially if there were many containers running?*
+
+Stop and Remove the container
+
+```
+$ docker stop helloworld_app
+$ docker rm helloworld_app
+```
+
+Now, remove the container with the "rm" command
+
+We are done with this part of the HOL.
