@@ -4,7 +4,9 @@ An intro to containers with entry level Hands on Lab
 
 ### Pre-work:
 
-* A pre-configured Docker-Engine environment - See [Prerequisites](../master/Prerequisites.md)
+> * Note - prior to starting this Hand On Lab, please setup your laptop with access to some Docker Engine environments where you can run Docker commands in the CLI.
+
+* Required - a pre-configured Docker-Engine environment - See [Prerequisites](../master/Prerequisites.md)
 
 
 ### Use the Participant Guide to complete the Hands On Lab:
