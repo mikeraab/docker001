@@ -6,7 +6,7 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 2.  [Verify Docker Engine Hands on Lab Environment](../master/Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
 3.  [Hello Helloworld](../master/Participant-Guide.md#hello-helloworld)
 5.  [Create a Dockerfile and Docker Image](../master/Participant-Guide.md#create-a-dockerfile-and-docker-image)
-6.  Push an Image to your Docker Hub Account
+6.  [Push an Image to your Docker Hub Account](../master/Participant-Guide.md#push-an-image-to-your-docker-hub-account)
 7.  Install Docker Compose (if needed)
 8.  Create Wordpress "stack"
 9.  Basics of Persistent storage
@@ -377,4 +377,31 @@ $ docker run username/docker-whale
 
 > *Note - if no tag is used, the default tag is "latest"*
 
-Push an Image to your Docker Hub Account
+## Install Docker Compose
+
+> *Note -if the Docker Engine setup you used, installed direcly on Windows 10 or your Mac, most likely, Docker Engine is installed.
+
+
+Install Docker compose
+
+> *Note - docs are here: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
+
+Use these specific below commands in your terminal for this exercise to install in your home directory.
+
+```
+$ curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /home/opc/docker-compose
+```
+
+Change the executable permissions
+
+```
+$ chmod +x /home/opc/docker-compose
+```
+
+Verify and check which version of Docker Compose was installed
+
+```
+$ ./docker-compose --version
+```
+
+
