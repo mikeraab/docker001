@@ -65,7 +65,29 @@ If the container is stopped and restarted from its image, the container will run
 <img src=images/004-docker-images.jpg />
 ***
 
-Jumping back a bit, there is a new nomenclature that Docker introduces, here are terms that you will need to be familiar with.  Each of these will be explored in this HOL.
+Jumping back a bit, there is a new nomenclature that Docker introduces, here are terms that you will need to be familiar with.  
+
+Each of these will be explored in this HOL.
 
 <img src=images/005-docker-terms.jpg />
+***
+
+Additionally, the Docker Engine is the core piece of technology that allows you to run containers.  A in order for a container to run on any Linux host, at a minimum, the Docker Engine needs to be installed.
+
+<img src=images/004-docker-engine.jpg />
+***
+
+Ok, so those are some of the mechanics of the technology, but why is Docker popular among all types of IT people?  Lets look at these proof points from Developers and IT Ops.
+
+<img src=images/004-why-containers.jpg />
+***
+
+Additonally, in speaking with hundreds of organizations that are exploring and using Docker, these are the core advantages that Docker brings.  
+
+<img src=images/005-docker-usage.jpg />
+***
+
+All of this is part of a transformation of technologies along a number of fronts, and is the basis for modern agile application development.
+
+<img src=images/003-evolution.jpg />
 ***
