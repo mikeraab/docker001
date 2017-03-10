@@ -408,4 +408,78 @@ Verify and check which version of Docker Compose was installed
 $ ./docker-compose --version
 ```
 
+## Create a Wordpress "stack"
+
+Follow these steps to create a simple Wordpress stack referenced here:
+
+[https://docs.docker.com/compose/wordpress/](https://docs.docker.com/compose/wordpress/) 
+
+Here is a synopsis of the steps in the above URL:
+
+Use an editor or VI to create a file named docker-compose.yml
+
+```
+vi docker-compose.yml
+```
+
+that contains the following text:
+
+```
+version: '2'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: wordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+    db_data:
+```
+
+Run the Wordpress stack by this command
+
+```
+$ ./docker-compose up -d
+```
+
+Verify the running stack, by visiting the Wordpress setup page.
+
+In your browser, navigate to the IP of the Docker host, port 8000
+
+```
+http://docker_host_ip:8000/wp-admin/install.php
+```
+
+**Congratulations, you have successfully launched your first Wordpress app in Docker!**
+
+Stop and Remove the running Wordpress and Database containers by using their short id.
+
+Remember this from a previous exercise
+
+```
+docker ps -a
+
+docker stop short_id
+
+docker rm short_id
+```
+
+Repeat for next container
 
