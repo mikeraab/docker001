@@ -9,7 +9,7 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 6.  [Push an Image to your Docker Hub Account](../master/Participant-Guide.md#push-an-image-to-your-docker-hub-account)
 7.  [Install Docker Compose](../master/Participant-Guide.md#install-docker-compose)
 8.  [Create Wordpress "stack"](../master/Participant-Guide.md#create-a-wordpress-stack)
-9.  Basics of Persistent storage
+9.  [Basics of Persistent storage](../master/Participant-Guide.md#basics-of-persistent-storage)
 10. Use Github and Docker Hub together to build an Image and Run the Container
 11. Demo ofContainer Cloud Service Showing Participant's Containers
 
@@ -573,3 +573,5 @@ navigate back to the blog post URL that you noted, in your browser and refresh t
 ***
 
 The data persisted because it was written to the host volume, and then re-joined to the containers when they were re-deployed on the same hosts.
+
+## Use Github and Docker Hub together to build an Image and Run the Container
