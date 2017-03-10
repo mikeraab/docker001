@@ -8,7 +8,7 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 5.  [Create a Dockerfile and Docker Image](../master/Participant-Guide.md#create-a-dockerfile-and-docker-image)
 6.  [Push an Image to your Docker Hub Account](../master/Participant-Guide.md#push-an-image-to-your-docker-hub-account)
 7.  [Install Docker Compose](../master/Participant-Guide.md#install-docker-compose)
-8.  Create Wordpress "stack"
+8.  [Create Wordpress "stack"](../master/Participant-Guide.md#create-a-wordpress-stack)
 9.  Basics of Persistent storage
 10. Use Github and Docker Hub together to build an Image and Run the Container
 11. Demo ofContainer Cloud Service Showing Participant's Containers
@@ -483,3 +483,4 @@ docker rm short_id
 
 Repeat for next container
 
+## Basics of Persistent storage
