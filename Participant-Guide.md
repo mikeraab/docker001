@@ -155,7 +155,7 @@ Copy/Paste the Docker Run command from the Docker Hub page and add a -d option s
 $ docker run -d -p 80:80/tcp "karthequian/helloworld:latest"
 ```
 
-Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Host where it is running and note the number of visits.  (The IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http:localhost )
+Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Host where it is running and note the number of visits.  (The IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http://localhost )
 
 
 <img src=images/004-hello-world.png />
