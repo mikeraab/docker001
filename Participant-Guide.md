@@ -174,7 +174,7 @@ Notice that Docker has assigned a container name, something like "stoic_wilson" 
 
 > *Note - unless you specify a container name, Docker will assign a similar 2 part name automatically*
 
-## Stop and Re-run Your Container with a More Descriptive Name
+**Stop and Re-run Your Container with a More Descriptive Name**
 
 Now, go back to the terminal window, stop the container and give it a more descriptive name, so that we could find it easier if there were many containers running.
 
@@ -223,7 +223,7 @@ Now, remove the container with the "rm" command
 
 We are done with this part of the HOL.
 
-Create a Dockerfile and Docker Image
+## Create a Dockerfile and Docker Image
 
 In this excersise you will build your wwn image from a Dockerfile
 
