@@ -668,9 +668,9 @@ Check out the Hello Earth Docker application that I just created in my Docker Hu
 
 ##Demo of Oracle Container Cloud Service Showing Participant's Containers
 
-Check out running your container in the Oracle Container Cloud Service
+Check out running your container in the Oracle Container Cloud Service:
 
-* **[Get Started for Free](https://cloud.oracle.com/tryit)
+* [Get Started for Free](https://cloud.oracle.com/tryit)
 
 
 
