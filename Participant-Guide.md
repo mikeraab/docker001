@@ -3,7 +3,7 @@
 This Hands on Lab (HOL) will take the particant through the basics of containerization, explore it's advantages and introduce Docker technology with begginer level excersises.  The topics to be covered in this 2 hour session are:
 
 1.  [Intro to Basic Container Concepts](../master/Participant-Guide.md#intro-to-basic-container-concepts)
-2.  Verify Docker Engine Hands on Lab Environment
+2.  [Verify Docker Engine Hands on Lab Environment](../master/Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
 3.  Hello Helloworld
 5.  Create a Dockerfile and Docker Image
 6.  Push an Image to your Docker Hub Account
@@ -94,9 +94,9 @@ All of this is part of a transformation of technologies along a number of fronts
 
 ##Verify Docker Engine Hands on Lab Environment
 
-In this first section you are going to verfify that you are able to connect to your Docker Engine environment.  Please access the environment now, and execute the following commands at the terminal.
+In this first section you are going to verfify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](../master/Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
 
-First, lets run as root, so that we do not have to preface everthing with sudo.
+First, run as root, so that you do not have to preface everthing with sudo.
 
 ```
 $ sudo -s
@@ -105,10 +105,10 @@ $ sudo -s
 Now, here is the Docker specific command to check what version is installed.
 
 ```
-$ docker version
+$ docker --version
 ```
 
-You should see an output of something like this.
+If Docker is installed and running, you should see an output of something like this.
 
 ```
 Docker version 1.1x.x, build 57bf6fd
