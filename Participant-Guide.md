@@ -379,14 +379,18 @@ $ docker run username/docker-whale
 
 ## Install Docker Compose
 
-> *Note -if the Docker Engine setup you used, installed direcly on Windows 10 or your Mac, most likely, Docker Engine is installed.
+> *Note -if the Docker Engine setup you used, installed direcly on Windows 10 or your Mac, most likely, Docker Compose is installed.
 
+**Introduction to Docker Compose**
 
+What is Docker Compose, why use it?
+
+According to Docker: Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration.
 Install Docker compose
 
 > *Note - docs are here: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
 
-Use these specific below commands in your terminal for this exercise to install in your home directory.
+Use these specific below commands in your terminal for this exercise to install in your home directory.  This example is for Oracle Linux 6
 
 ```
 $ curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /home/opc/docker-compose
