@@ -40,14 +40,16 @@ Docker is the company and containerization technology.
 
 Containers have been around for many years.  Docker created a technology that was usable by mere humans, and was much easier to understand than before.  Thus, has enjoyed a tremendous amount of support for creating a technology for packaging applications to be **portable and lightweight.**
 
+However, there have been and still are variations on container technology.  Here are some of the technologies we have seen through the years.
+
 History of Linux Containers
 
 <img src=images/002-container-history.png />
 ***
 
-VM vs Container
+Now, lets look at how a virtual machine (VM) is different from a container
 
-While containers may sound like a virtual machine (VM), the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the **entire guest operating system.**
+While containers may sound like a VM, the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the **entire guest operating system.**
 
 Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.  
 
@@ -56,7 +58,9 @@ Whereas, Containers include the application, all of its dependencies, but share 
 
 > *Note - at this time, Windows and Linux containers require that they run on their respective kernel base, therefore, Windows containers cannot run on Linux hosts and vice versa.*
 
-Docker images are a collection of files, which has everthing needed to run the software application inside the container.
+Docker images are a collection of files, which has everthing needed to run the software application inside the container.  However, they are ephemeral, meaning that any data that is written inside the container, while it is running, will not be retained.  
+
+If the container is stopped and restarted from its image, the container will run exactly the same as the first time, absent of any changes made during the last run cycle.  Changes to the container either have to be made during the image creation process, using the Dockerfile that become part of the image, or data can be retained by mounting a persistent storage volume, from inside the container to the outside.  This will be explored further in the HOL exercises below. 
 
 <img src=images/004-docker-images.jpg />
 ***
