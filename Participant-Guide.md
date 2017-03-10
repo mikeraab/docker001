@@ -5,7 +5,7 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 1.  [Intro to Basic Container Concepts](../master/Participant-Guide.md#intro-to-basic-container-concepts)
 2.  [Verify Docker Engine Hands on Lab Environment](../master/Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
 3.  [Hello Helloworld](../master/Participant-Guide.md#hello-helloworld)
-5.  Create a Dockerfile and Docker Image
+5.  [Create a Dockerfile and Docker Image](../master/Participant-Guide.md#Create-a-Dockerfile-and-Docker-Image)
 6.  Push an Image to your Docker Hub Account
 7.  Install Docker Compose (if needed)
 8.  Create Wordpress "stack"
@@ -375,3 +375,4 @@ $ docker run username/docker-whale
 
 > *Note - if no tag is used, the default tag is "latest"*
 
+Push an Image to your Docker Hub Account
