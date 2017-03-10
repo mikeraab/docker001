@@ -65,7 +65,7 @@ If the container is stopped and restarted from its image, the container will run
 <img src=images/004-docker-images.jpg />
 ***
 
-There is a new nomenclature that Docker introduce, here are terms that you will need to be familiar with.
+Jumping back a bit, there is a new nomenclature that Docker introduces, here are terms that you will need to be familiar with.  Each of these will be explored in this HOL.
 
 <img src=images/005-docker-terms.jpg />
 ***
