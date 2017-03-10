@@ -89,7 +89,7 @@ Additonally, in speaking with hundreds of organizations that are exploring and u
 
 All of this is part of a transformation of technologies along a number of fronts, and is the basis for modern agile application development.
 
-<img src=images/003-evolution.jpg />
+<img src=images/006-evolution.jpg />
 ***
 
 ##Verify Docker Engine Hands on Lab Environment
