@@ -300,11 +300,13 @@ $ docker run docker-whale
 
 Notice the output in the terminal.  Re-run the image a couple of times, as the container will run once, then stop.
 
+## Push an Image to your Docker Hub Account
+
 **Registries**
 
 Registries store Docker images.  Using a registry is the first step towards moving Docker off the laptop.  The most widely used registry is the Docker Hub: [https://hub.docker.com](https://hub.docker.com) 
 
-> *Note - in this exercise you will need a Docker Hub account.  If you do not have one already, you can signup for free, navigate to: [https://hub.docker.com/](https://hub.docker.com/)*
+> *Note - in this exercise you will need a Docker Hub account to use the public Docker registry.  If you do not have one already, you can signup for free, navigate to: [https://hub.docker.com/](https://hub.docker.com/)*
 
 **Tag and Push your new image to the Docker Hub registry.  In this exercise username will be your Docker Hub account name.**
 
