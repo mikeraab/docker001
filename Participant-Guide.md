@@ -444,14 +444,24 @@ services:
        - db
      image: wordpress:latest
      ports:
-       - "8000:80"
+       - "80:80"
      restart: always
+     volumes:
+       - /var/www/html:/var/www/html:rw
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_PASSWORD: wordpress
-   volumes:
+volumes:
      db_data:
-      - /var/www/html:/var/www/html:rw
+```
+
+Save docker-compose.yml
+
+If you are using  VI, save the file by typing the Esc key - colon - w (for write) - q (for quit):
+
+	
+```
+esc : w q 
 ```
 
 Run the Wordpress stack by this command
@@ -465,7 +475,7 @@ Verify the running stack, by visiting the Wordpress setup page.
 In your browser, navigate to the IP of the Docker host, port 8000
 
 ```
-http://docker_host_ip:8000/wp-admin/install.php
+http://docker_host_ip/wp-admin/install.php
 ```
 
 **Congratulations, you have successfully launched your first Wordpress app in Docker!**
@@ -498,9 +508,11 @@ So let's explore how data is persisted in the Wordpress stack we just used.
 
 In your browser navigate to Host_IP and append it with the Wordpress initialization URL: /wp-admin/install.php.  
 
-> *Note - this is the same setup URL you saw when we deployed with Docker Compose, however this time, we are going to setup Wordpress and create blog post.*
+> *Note - this is the same setup URL you saw when we deployed with Docker Compose above, however this time, we are going to setup Wordpress and create blog post.*
 
-[http://ip_address/wp-admin/install.php](http://ip_address/wp-admin/install.php)
+```
+http://docker_host_ip/wp-admin/install.php
+```
 
 First, select your language:
 
