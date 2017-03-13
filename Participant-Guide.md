@@ -263,7 +263,9 @@ To use VI, if you are on Oracle Linux
 $ vi Dockerfile
 ```
 
-Create a text file name Dockerfile with these 3 lines
+Create a text file name Dockerfile with these 3 lines.  
+
+> *If you are using VI, press the "i" key to enter insert mode.
 
 ```
 FROM docker/whalesay:latest
