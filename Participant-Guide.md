@@ -480,23 +480,13 @@ http://docker_host_ip/wp-admin/install.php
 
 **Congratulations, you have successfully launched your first Wordpress app in Docker!**
 
-Stop and Remove the running Wordpress and Database containers by using their short id.
 
-Remember this from a previous exercise
-
-```
-docker ps -a
-
-docker stop short_id
-
-docker rm short_id
-```
 
 Repeat for next container
 
 ## Basics of Persistent storage
 
- **Understand Docker Volumes
+ **Understand Docker Volumes**
 
 This section will explore data persistence through the use of host data volumes.
 
@@ -508,7 +498,7 @@ So let's explore how data is persisted in the Wordpress stack we just used.
 
 In your browser navigate to Host_IP and append it with the Wordpress initialization URL: /wp-admin/install.php.  
 
-> *Note - this is the same setup URL you saw when we deployed with Docker Compose above, however this time, we are going to setup Wordpress and create blog post.*
+> *Note - this is the same setup URL you saw when we deployed with Docker Compose above and you may alread have this loaded in a browser tab, however this time, we are going to setup Wordpress and create blog post.*
 
 ```
 http://docker_host_ip/wp-admin/install.php
