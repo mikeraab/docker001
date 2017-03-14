@@ -1,2 +1,2 @@
-# helloearth
-Another hello world docker container example
+# hello earth
+Another hello world type docker container example
