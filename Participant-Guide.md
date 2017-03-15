@@ -588,25 +588,34 @@ Now, you will explore another method of creating a image using GitHub and Docker
 
 > *Note - in this exercise you will build a Dockerfile from Github on Docker Hub, deploy the latest version, then modify the Index.html in Github to trigger an automated Docker image build in DockerHub, and then verify the new build and image as a running container in.*
 
-**To begin, fork this Github repo to your own
+**To begin, fork this Github Docker001 repo to your own
 
+<img src=images/github-dockerhub_14.jpg />
+***
 
 **Once you have completed all the steps above, follow these steps:**
 
 In your Github account navigate to the URL where you have forked the above Docker-Hello-World.  Replace your Github username in the below URL.
 
-https://github.com/*username*/docker-images/blob/master/ContainerCloud/images/docker-hello-world/
+https://github.com/*username*/docker-images/blob/master/docker001/lab1
 
-On the Github page, click on the link for "Index.html":
-
-<img src=images/049-hw-index.png />
-***
-
-This is the HTML for the home page of the HelloWorld Demo from above.  
+On your Github account page, click on the link for "Index.html":
 
 You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe the changes.
 
 Edit the page via the pencil icon and make these changes:
+
+<img src=images/github-dockerhub_7.jpg />
+***
+
+Commit the changes
+
+<img src=images/github-dockerhub_8.jpg />
+***
+
+This is the HTML for the home page of the HelloWorld Demo from above.  
+
+
 
 <img src=images/050-edit-index.png />
 ***
