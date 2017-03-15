@@ -1,6 +1,6 @@
 # Hands On Lab - Prerequisites
 
-## This document outlines some example Docker Engine environment installs that should be completed, prior to starting the Hands on Lab Participant Guide.
+## This document outlines some example Docker Engine environment installs that should be completed, prior to starting the Hands on Lab Participant Guide.  These examples are only a few of the many that you might utilize to create a Docker Environment.
 
 
 ### Docker Engine on Windows:
