@@ -588,66 +588,74 @@ Now, you will explore another method of creating a image using GitHub and Docker
 
 > *Note - in this exercise you will build a Dockerfile from Github on Docker Hub, deploy the latest version, then modify the Index.html in Github to trigger an automated Docker image build in DockerHub, and then verify the new build and image as a running container in.*
 
-**To begin, fork this Github Docker001 repo to your own
+
+**To begin, fork this Github Docker001 repo to your own**
+
+Log into you Github account: https://github.com/login
+
+In your browser, navigate to this GitHub repository: https://github.com/oracle/cloud-native-devops-workshop/docker001 
+
+Select the Fork button. 
 
 <img src=images/github-dockerhub_14.jpg />
 ***
 
-**Once you have completed all the steps above, follow these steps:**
+This will automatically copy this repo to your own GitHub account, where you will be able to edit it.
 
-In your Github account navigate to the URL where you have forked the above Docker-Hello-World.  Replace your Github username in the below URL.
-
-https://github.com/*username*/docker-images/blob/master/docker001/lab1
-
-On your Github account page, click on the link for "Index.html":
-
-You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe the changes.
-
-Edit the page via the pencil icon and make these changes:
-
-<img src=images/github-dockerhub_7.jpg />
+<img src=images/github-dockerhub_9.jpg />
 ***
 
-Commit the changes
+Now, in your browser, in another tab, log into your Docker Hub Account
+
+```
+https://hub.docker.com/login
+```
+
+** ADD LINK ACCOUNT SCREENSHOTS**
+
+Within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
+
+<img src=images/github-dockerhub_13.jpg />
+***
+
+Select Create Auto-build:
+
+<img src=images/github-dockerhub_11.jpg />
+***
+
+Select the docker001 repository:
+
+<img src=images/github-dockerhub_4.jpg />
+***
+
+Make the repository name "hello-earth" and add a Short Description
+
+<img src=images/github-dockerhub_10.jpg />
+***
+
+Within the Build Settings tab, enter "/lab1" for the Dockerfile Location and press the "Save Changes" button: 
 
 <img src=images/github-dockerhub_8.jpg />
 ***
 
-This is the HTML for the home page of the HelloWorld Demo from above.  
+Back in your Github account navigate to the URL where you have forked the above Docker001 repo, and specifically open the "lab1" folder.  Replace your Github username in the below URL.
 
+https://github.com/*username*/docker001/tree/master/lab1
 
+On the GitHub page, click on the link for "Index.html":
+
+**GET SCREENSHOT**
+
+You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe the changes.
+
+Edit the page via the pencil icon:
 
 <img src=images/050-edit-index.png />
 ***
 
-On line 8, change the background color to 
+Make the following changes to Line 12, replacing your own name and city where it says myName and myCity
 
-```
-black
-```
-
-Add a new line 9 with the text
-
-```
-color: white;
-```
-
-On line 14, edit the H2 header to this, replacing "your_name" and "your_city" with your own name and city
-```
-<h2>Hello Earth from "your_name" at Oracle Code in "your_city"!</h2>
-```
-
-Create a new line after </body> on line 15, and add this line for an image of the earth 
-
-```
-<img src="http://www.freeimageslive.com/galleries/space/earth/pics/a17_h_148_22725.gif">
-```
-
-Check to see that it looks just like this (edits are highlighted in the red boxes):
-
-
-<img src=images/051-index-edit.png />
-***
+**GET SCREENSHOT**
 
 Scroll Down and Commit your Changes.  Add a description and press the "Commit Changes" button:
 
@@ -656,83 +664,33 @@ Scroll Down and Commit your Changes.  Add a description and press the "Commit Ch
 
 This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in index.html as part of the build process.  
 
-It will take a few minutes for this to complete in Docker Hub.  When it does, Success will be noted in the Status column:
-
-<img src=images/053-docker-build.png />
+<img src=images/github-dockerhub_3.jpg />
 ***
 
-Back in your Docker environment.
+It will take a few minutes for this to complete in Docker Hub.  When it does, Success will be noted in the Status column:
 
+<img src=images/github-dockerhub_3.jpg />
+***
+
+Back in your Docker CLI environment, run the new container:
+```
+docker run -d -p80:80 "myDockerName/hello-earth"
 
 Once the container is running, verify the Host that the container is running on: 
 
-Visit the host’s IP on port 8080 and observe your changes and a new Hello Earth!
+Visit the host’s IP  and observe your changes and a new Hello Earth contianer that you just built and ran!
 
-<img src=images/058-hello-earth.png />
+<img src=images/github-dockerhub_15.jpg />
 ***
 
 Tweet to the world that you have created your own Hello Earth containerized app!
 
 '''
-Check out the HelloEarth #Docker app that I just created at #OracleCode posted in my Docker Hub https://hub.docker.com/r/yourname/hello-earth
+Check out the HelloEarth #Docker app that I just created.  It's posted in my Docker Hub https://hub.docker.com/r/myDockerName/hello-earth
 '''
 
 **Congratulations!**  You have successfully completed this Hands On Lab!
 
-<img src=images/github-dockerhub_1.jpg />
-***
-
-<img src=images/github-dockerhub_2.jpg />
-***
-
-<img src=images/github-dockerhub_3.jpg />
-***
-
-<img src=images/github-dockerhub_4.jpg />
-***
-
-<img src=images/github-dockerhub_5.jpg />
-***
-
-<img src=images/github-dockerhub_6.jpg />
-***
-
-<img src=images/github-dockerhub_7.jpg />
-***
-
-<img src=images/github-dockerhub_8.jpg />
-***
-
-<img src=images/github-dockerhub_9.jpg />
-***
-
-<img src=images/github-dockerhub_10.jpg />
-***
-
-<img src=images/github-dockerhub_11.jpg />
-***
-
-<img src=images/github-dockerhub_12.jpg />
-***
-
-<img src=images/github-dockerhub_13.jpg />
-***
-
-<img src=images/github-dockerhub_14.jpg />
-***
-
-
-<img src=images/github-dockerhub_15.jpg />
-***
-
-<img src=images/github-dockerhub_16.jpg />
-***
-
-<img src=images/github-dockerhub_17.jpg />
-***
-
-<img src=images/github-dockerhub_18.jpg />
-***
 ***
 
 ##Demo of Oracle Container Cloud Service Showing Participant's Containers
