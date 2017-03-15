@@ -675,6 +675,7 @@ It will take a few minutes for this to complete in Docker Hub.  When it does, Su
 Back in your Docker CLI environment, run the new container:
 ```
 docker run -d -p80:80 "myDockerName/hello-earth"
+```
 
 Once the container is running, verify the Host that the container is running on: 
 
