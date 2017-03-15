@@ -10,7 +10,7 @@ This Hands on Lab (HOL) will take the particant through the basics of containeri
 7.  [Install Docker Compose](../master/Participant-Guide.md#install-docker-compose)
 8.  [Create Wordpress "stack"](../master/Participant-Guide.md#create-a-wordpress-stack)
 9.  [Basics of Persistent storage](../master/Participant-Guide.md#basics-of-persistent-storage)
-10. [Use Github and Docker Hub together to build an Image and Run the Container](../master/Participant-Guide.md#use-github-and-docker-hub-together-to-build-an-image-and-run-the-container)
+10. [Use Github and Docker Hub together to build an Image and Run the Container - DRAFT in PROGRESS](../master/Participant-Guide.md#use-github-and-docker-hub-together-to-build-an-image-and-run-the-container)
 11. [Demo of Oracle Container Cloud Service Showing Participant's Containers](../master/Participant-Guide.md#demo-of-oracle-container-cloud-service-showing-participants-containers)
 
 
@@ -679,6 +679,60 @@ Check out the HelloEarth #Docker app that I just created at #OracleCode posted i
 
 **Congratulations!**  You have successfully completed this Hands On Lab!
 
+<img src=images/github-dockerhub_1.jpg />
+***
+
+<img src=images/github-dockerhub_2.jpg />
+***
+
+<img src=images/github-dockerhub_3.jpg />
+***
+
+<img src=images/github-dockerhub_4.jpg />
+***
+
+<img src=images/github-dockerhub_5.jpg />
+***
+
+<img src=images/github-dockerhub_6.jpg />
+***
+
+<img src=images/github-dockerhub_7.jpg />
+***
+
+<img src=images/github-dockerhub_8.jpg />
+***
+
+<img src=images/github-dockerhub_9.jpg />
+***
+
+<img src=images/github-dockerhub_10.jpg />
+***
+
+<img src=images/github-dockerhub_11.jpg />
+***
+
+<img src=images/github-dockerhub_12.jpg />
+***
+
+<img src=images/github-dockerhub_13.jpg />
+***
+
+<img src=images/github-dockerhub_14.jpg />
+***
+
+
+<img src=images/github-dockerhub_15.jpg />
+***
+
+<img src=images/github-dockerhub_16.jpg />
+***
+
+<img src=images/github-dockerhub_17.jpg />
+***
+
+<img src=images/github-dockerhub_18.jpg />
+***
 ***
 
 ##Demo of Oracle Container Cloud Service Showing Participant's Containers
