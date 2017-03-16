@@ -663,7 +663,7 @@ https://github.com/*username*/docker001/tree/master/lab1
 
 On the GitHub page, click on the link for "Index.html":
 
-<img src=images/2017-03-16_11-15-12.jpg />
+<img src=images/2017-03-16_11-15-12.png />
 
 
 You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe the changes.
