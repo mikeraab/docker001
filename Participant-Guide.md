@@ -45,7 +45,7 @@ However, there have been and still are variations on container technology.  Here
 History of Linux Containers
 
 <img src=images/002-container-history.png />
-***
+
 
 Now, lets look at how a virtual machine (VM) is different from a container
 
@@ -54,7 +54,7 @@ While containers may sound like a VM, the two are distinct technologies. With VM
 Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.  
 
 <img src=images/002-vm-vs-container.png />
-***
+
 
 > *Note - at this time, Windows and Linux containers require that they run on their respective kernel base, therefore, Windows containers cannot run on Linux hosts and vice versa.*
 
@@ -63,19 +63,19 @@ Docker images are a collection of files, which has everthing needed to run the s
 If the container is stopped and restarted from its image, the container will run exactly the same as the first time, absent of any changes made during the last run cycle.  Changes to the container either have to be made during the image creation process, using the Dockerfile that become part of the image, or data can be retained by mounting a persistent storage volume, from inside the container to the outside.  This will be explored further in the HOL exercises below. 
 
 <img src=images/004-docker-images.jpg />
-***
+
 
 Jumping back a bit, there is a new nomenclature that Docker introduces, here are terms that you will need to be familiar with.  
 
 Each of these will be explored in this HOL.
 
 <img src=images/005-docker-terms.jpg />
-***
+
 
 Additionally, the Docker Engine is the core piece of technology that allows you to run containers.  A in order for a container to run on any Linux host, at a minimum, the Docker Engine needs to be installed.
 
 <img src=images/004-docker-engine.jpg />
-***
+
 
 Ok, so those are some of the mechanics of the technology, but why is Docker popular among all types of IT people?  Lets look at these proof points from Developers and IT Ops.
 
@@ -85,12 +85,12 @@ Ok, so those are some of the mechanics of the technology, but why is Docker popu
 Additonally, in speaking with hundreds of organizations that are exploring and using Docker, these are the core advantages that Docker brings.  
 
 <img src=images/005-docker-usage.jpg />
-***
+
 
 All of this is part of a transformation of technologies along a number of fronts, and is the basis for modern agile application development.
 
 <img src=images/006-evolution.jpg />
-***
+
 
 ##Verify Docker Engine Hands on Lab Environment
 
@@ -159,7 +159,8 @@ Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Ho
 
 
 <img src=images/004-hello-world.png />
-***
+
+
 You are now actually using an application that is in the Docker container.  Refresh the browser and observe how the visits counts increments.  This is a live application. A simple example, but an example of the experience of using an application running in a container, which is no different than if it was not running in a container.
 
 > *Makes you wonder about how many apps that you are using on a day to day basis, may indeed be running in a Docker container?*
@@ -341,7 +342,7 @@ Navigate to your account page in Docker Hub via this URL, substituting your user
 Do you see the image that you pushed?
 
 <img src=images/010-docker-hub.png />
-***
+
 
 Now, remove the local image and run the image from the registry
 
@@ -509,42 +510,42 @@ http://docker_host_ip/wp-admin/install.php
 First, select your language:
 
 <img src=images/033-wp-setup1.png />
-***
+
 
 Setup the Wordpress login details.  Be sure to keep the Username and Password in your notes:
 
 <img src=images/034-wp-setup2.png />
-***
+
 
 Click the "log In" button to log into to Wordpress:
 
 <img src=images/034-wp-setup2.png />
-***
+
 
 Login using the credentials you created earlier:
 
 <img src=images/036-wp-login2.png />
-***
+
 
 Select "Write your first blog post" in the Next Steps section:
 
 <img src=images/037-write-blog.png />
-***
+
 
 Create a sample blog post.  Include an image of your choosing, if you would like and click Publish:
 
 <img src=images/038-publish-blog.png />
-***
+
 
 Click on the "Permalink" to navigate to the blog post:
 
 <img src=images/039-permalink.png />
-***
+
 
 Copy the Permalink URL of the blog post and keep this in your notes, as you will need it later:
 
 <img src=images/040-view-blog.png />
-***
+
 
 Stop and Remove the running Wordpress and Database containers by using their short id.
 
@@ -563,7 +564,7 @@ Repeat for next container
 Verify in the browser that the Wordpress blog post is gone by refreshing the page:
 
 <img src=images/043-refresh.png />
-***
+
 
 Redeploy the Wordpress stack.  
 
@@ -574,7 +575,7 @@ $ ./docker-compose up -d
 navigate back to the blog post URL that you noted, in your browser and refresh the page:
 
 <img src=images/047-refresh-blog.png />
-***
+
 
 The data persisted because it was written to the host volume, and then re-joined to the containers when they were re-deployed on the same hosts.
 
@@ -598,12 +599,12 @@ In your browser, navigate to this GitHub repository: https://github.com/oracle/c
 Select the Fork button. 
 
 <img src=images/github-dockerhub_14.jpg />
-***
+
 
 This will automatically copy this repo to your own GitHub account, where you will be able to edit it.
 
 <img src=images/github-dockerhub_9.jpg />
-***
+
 
 Now, in your browser, in another tab, log into your Docker Hub Account
 
@@ -616,27 +617,27 @@ https://hub.docker.com/login
 Within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
 
 <img src=images/github-dockerhub_13.jpg />
-***
+
 
 Select Create Auto-build:
 
 <img src=images/github-dockerhub_11.jpg />
-***
+
 
 Select the docker001 repository:
 
 <img src=images/github-dockerhub_4.jpg />
-***
+
 
 Make the repository name "hello-earth" and add a Short Description
 
 <img src=images/github-dockerhub_10.jpg />
-***
+
 
 Within the Build Settings tab, enter "/lab1" for the Dockerfile Location and press the "Save Changes" button: 
 
 <img src=images/github-dockerhub_8.jpg />
-***
+
 
 Back in your Github account navigate to the URL where you have forked the above Docker001 repo, and specifically open the "lab1" folder.  Replace your Github username in the below URL.
 
@@ -651,7 +652,7 @@ You are going to modify this Index.html to create a new "Hello Earth" page, this
 Edit the page via the pencil icon:
 
 <img src=images/050-edit-index.png />
-***
+
 
 Make the following changes to Line 12, replacing your own name and city where it says myName and myCity
 
@@ -660,17 +661,17 @@ Make the following changes to Line 12, replacing your own name and city where it
 Scroll Down and Commit your Changes.  Add a description and press the "Commit Changes" button:
 
 <img src=images/052-commit-index.png />
-***
+
 
 This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in index.html as part of the build process.  
 
 <img src=images/github-dockerhub_3.jpg />
-***
+
 
 It will take a few minutes for this to complete in Docker Hub.  When it does, Success will be noted in the Status column:
 
 <img src=images/github-dockerhub_3.jpg />
-***
+
 
 Back in your Docker CLI environment, run the new container:
 ```
@@ -692,15 +693,15 @@ Check out the HelloEarth #Docker app that I just created.  It's posted in my Doc
 
 **Congratulations!**  You have successfully completed this Hands On Lab!
 
-***
 
-##Demo of Oracle Container Cloud Service Showing Participant's Containers
+
+## Demo of Oracle Container Cloud Service Showing Participant's Containers
 
 Check out running your container in the Oracle Container Cloud Service:
 
 * [Get Started for Free](https://cloud.oracle.com/tryit)
 
-***
+
 
 ## Summary/Recap Pointer to Further Resources
 
