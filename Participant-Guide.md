@@ -125,6 +125,8 @@ $ docker run hello-world
 
 Since the "hello-world" image is not available locally on the host, the command automatically pulls the hello-world image from the public Docker Hub image repository and runs the container in the foreground.
 
+<img src=images/2017-03-16_13-40-42.jpg />
+
 **Congratulations, you have just run your first Docker container!**
 
 List all containers: 
@@ -136,7 +138,7 @@ $ docker ps -a
 ```
 Notice that the hello-world container, ran once and then exited:
 
-<img src=images/2017-03-16_13-40-42.jpg />
+<img src=images/2017-03-16_14-46-49.jpg />
 
 In this excercise you will explore another Docker image from Docker Hub
 
@@ -164,7 +166,7 @@ $ docker run -d -p 80:80/tcp "karthequian/helloworld:latest"
 
 Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Host where it is running and note the number of visits: 
 
-> *Note - the IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http://localhost - for the rest of this document, it may just be referred to as host IP for simplicity*
+> *Note - the IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http://localhost (for the rest of this document, it may just be referred to as host IP or docker host IP for simplicity)*
 
 
 <img src=images/004-hello-world.png />
@@ -182,7 +184,9 @@ List all running containers:
 $ docker ps
 ```
 
-Notice that Docker has assigned a container name, something like "stoic_wilson" in the above?  What name did Docker give your container?  Remember this name, as we will use it in a bit.
+Notice that Docker has assigned a container name, something like "ecstatic_lamport" in the below?  What name did Docker give your container?  Remember this name, as we will use it in a bit.
+
+<img src=images/2017-03-16_13-49-25.jpg />
 
 > *Note - unless you specify a container name, Docker will assign a similar 2 part name automatically*
 
@@ -254,9 +258,11 @@ Follow Steps 1 and 2 from this exercise:
 
 Here is a synopsis of the steps in the above URL:
 
-Make a directory to store your Dockerfile:
+From your home directory, make a directory to store your Dockerfile:
 
 ```
+$ cd ~ 
+
 $ mkdir mydockerbuild
 ```
 
@@ -311,7 +317,10 @@ $ docker images
 $ docker run docker-whale
 ```
 
-Notice the output in the terminal.  Re-run the image a couple of times, as the container will run once, then stop.
+Notice the output in the terminal, the container will run once, then stop.
+
+<img src=images/2017-03-16_14-10-47.jpg /> 
+
 
 ## Push an Image to your Docker Hub Account
 
@@ -388,7 +397,17 @@ Now, run the image directly from your repository on Dockerhub, and force a new p
 $ docker run username/docker-whale
 ```
 
-> *Note - if no tag is used, the default tag is "latest"*
+> *Note - if no tag is used, the default tag is "latest", and it is pulled from your registry*
+
+<img src=images/2017-03-16_14-17-38.jpg />
+
+At this point please stop and remove all containers.  To do this for all containers, uses these commands:
+
+```
+$ docker stop $(docker ps -a -q)
+
+$ docker rm $(docker ps -a -q)
+```
 
 ## Install Docker Compose
 
@@ -403,10 +422,19 @@ Install Docker compose
 
 > *Note - docs are here: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
 
-Use these specific below commands in your terminal for this exercise to install in your home directory.  This example is for Oracle Linux 6:
+Use these specific below commands in your terminal for this exercise to install in your home directory.  
+
+Be sure that you are in your home directory:
 
 ```
-$ curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /home/opc/docker-compose
+$ cd ~
+
+$ pwd
+```
+
+Then, uses this curl command to install Docker Compose:
+```
+$ curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
 ```
 
 Change the executable permissions:
@@ -567,7 +595,7 @@ $ docker stop short_id
 $ docker rm short_id
 ```
 
-Repeat for next container until all are stopped and removed.
+Repeat for next container until all are stopped and removed, or use the bulk removal that was shown before.
 
 
 Verify in the browser that the Wordpress blog post is gone by refreshing the page:
