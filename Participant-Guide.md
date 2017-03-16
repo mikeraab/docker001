@@ -627,6 +627,16 @@ Select GitHub as shown here:
 <img src=images/2017-03-16_10-41-14.jpg />
 
 
+Select for both Public and Private repositories:
+
+<img src=images/2017-03-16_10-41-23.jpg />
+
+
+Again, within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
+
+<img src=images/github-dockerhub_13.jpg />
+
+
 Select Create Auto-build:
 
 <img src=images/github-dockerhub_11.jpg />
