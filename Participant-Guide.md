@@ -690,7 +690,7 @@ This will trigger a new automated build in Docker Hub, which will run the Docker
 
 It will take a few minutes for this to complete in Docker Hub.  When it does, Success will be noted in the Status column:
 
-<img src=images/github-dockerhub_3.jpg />
+<img src=images/github-dockerhub_1.jpg />
 
 
 Back in your Docker CLI environment, run the new container:
