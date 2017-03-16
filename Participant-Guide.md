@@ -598,13 +598,13 @@ In your browser, navigate to this GitHub repository: https://github.com/oracle/c
 
 Select the Fork button. 
 
-<img src=images/github-dockerhub_14.jpg />
-___
+	<img src=images/github-dockerhub_14.jpg />
+
 
 This will automatically copy this repo to your own GitHub account, where you will be able to edit it.
 
-<img src=images/github-dockerhub_9.jpg />
-___
+	<img src=images/github-dockerhub_9.jpg />
+
 
 Now, in your browser, in another tab, log into your Docker Hub Account:
 
@@ -615,47 +615,47 @@ https://hub.docker.com/login
 Within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
 
 <img src=images/github-dockerhub_13.jpg />
-___
+
 
 This will prompt you to link your GitHub account:
 
 <img src=images/2017-03-16_10-41-09.jpg />
-___
+
 
 Select GitHub as shown here:
 
 <img src=images/2017-03-16_10-41-14.jpg />
-___
+
 
 Select for both Public and Private repositories:
 
 <img src=images/2017-03-16_10-41-23.jpg />
-___
+
 
 Again, within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
 
 <img src=images/github-dockerhub_13.jpg />
-___
+
 
 Select Create Auto-build:
 
 <img src=images/github-dockerhub_11.jpg />
-___
+
 
 Select the docker001 repository:
 
 <img src=images/github-dockerhub_4.jpg />
-___
+
 
 Make the repository name "hello-earth" and add a Short Description
 
 <img src=images/github-dockerhub_10.jpg />
-___
+
 
 Within the Build Settings tab, enter "/lab1" for the Dockerfile Location and press the "Save Changes" button: 
 
 <img src=images/github-dockerhub_8.jpg />
-___
+
 
 Back in your Github account navigate to the URL where you have forked the above Docker001 repo, and specifically open the "lab1" folder.  Replace your Github username in the below URL.
 
@@ -664,34 +664,34 @@ https://github.com/*username*/docker001/tree/master/lab1
 On the GitHub page, click on the link for "Index.html":
 
 <img src=images/2017-03-16_11-15-12.png />
-___
+
 
 You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe the changes.
 
 Edit the page via the pencil icon:
 
 <img src=images/050-edit-index.png />
-___
+
 
 Make the following changes to Line 12, replacing your own name and city where it says myName and myCity
 
 <img src=images/2017-03-16_11-19-42.jpg />
-___
+
 
 Scroll Down and Commit your Changes.  Add a description and press the "Commit Changes" button:
 
 <img src=images/052-commit-index.png />
-___
+
 
 This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in index.html as part of the build process.  
 
 <img src=images/github-dockerhub_3.jpg />
-___
+
 
 It will take a few minutes for this to complete in Docker Hub.  When it does, Success will be noted in the Status column:
 
 <img src=images/github-dockerhub_1.jpg />
-___
+
 
 Back in your Docker CLI environment, run the new container:
 ```
@@ -703,7 +703,7 @@ Once the container is running, verify the Host that the container is running on:
 Visit the host’s IP  and observe your changes and a new Hello Earth contianer that you just built and ran!
 
 <img src=images/github-dockerhub_15.jpg />
-___
+
 
 Tweet to the world that you have created your own Hello Earth containerized app!
 
