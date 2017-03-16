@@ -96,19 +96,19 @@ All of this is part of a transformation of technologies along a number of fronts
 
 In this first section you are going to verfify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](../master/Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
 
-First, run as root, so that you do not have to preface everthing with sudo.
+First, run as root, so that you do not have to preface everthing with sudo:
 
 ```
 $ sudo -s
 ```
 
-Now, here is the Docker specific command to check what version is installed.
+Now, here is the Docker specific command to check what version is installed:
 
 ```
 $ docker --version
 ```
 
-If Docker is installed and running, you should see an output of something like this.
+If Docker is installed and running, you should see an output of something like this:
 
 ```
 Docker version 1.1x.x, build 57bf6fd
@@ -116,7 +116,7 @@ Docker version 1.1x.x, build 57bf6fd
 
 ## Hello Helloworld
 
-Run Docker’s Hello-world example
+Run Docker’s Hello-world example:
 
 	
 ```
@@ -127,7 +127,9 @@ Since the "hello-world" image is not available locally on the host, the command 
 
 **Congratulations, you have just run your first Docker container!**
 
-List all containers (- a = running **and** stopped)
+List all containers: 
+
+> *Note - the "- a" option = running **and** stopped*
 
 ```
 $ docker ps -a
@@ -141,7 +143,7 @@ Open a browser and go to this URL:
 
 [https://hub.docker.com/r/karthequian/helloworld](https://hub.docker.com/r/karthequian/helloworld)
 
-Pull the image from the Docker Hub Registry
+Pull the image from the Docker Hub Registry:
 
 >  *Note - observe how the layers are pulled individually*
 
@@ -149,13 +151,17 @@ Pull the image from the Docker Hub Registry
 $ docker pull karthequian/helloworld:latest
 ```
 
-Copy/Paste the Docker Run command from the Docker Hub page and add a -d option so the container runs in "detached" mode (as opposed to the foreground mode in the last exercise).  This frees up your terminal window.
+Copy/Paste the Docker Run command from the Docker Hub page and add a -d option so the container runs in "detached" mode:
+
+> *Note - the "-d" option run the container in detached mode, as opposed to the foreground mode that you saw in the last exercise.  The benefit of this is that for longer running containers, it frees up your terminal window.*
 
 ```
 $ docker run -d -p 80:80/tcp "karthequian/helloworld:latest"
 ```
 
-Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Host where it is running and note the number of visits.  (The IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http://localhost )
+Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Host where it is running and note the number of visits: 
+
+> *Note - the IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http://localhost - for the rest of this document, it may just be referred to as host IP for simplicity*
 
 
 <img src=images/004-hello-world.png />
@@ -165,7 +171,9 @@ You are now actually using an application that is in the Docker container.  Refr
 
 > *Makes you wonder about how many apps that you are using on a day to day basis, may indeed be running in a Docker container?*
 
-Now, look at the name that Docker has assigned the Helloworld container that is running.  List all running containers.
+Now, look at the name that Docker has assigned the Helloworld container that is running.  
+
+List all running containers:
 
 ```
 $ docker ps
@@ -179,19 +187,19 @@ Notice that Docker has assigned a container name, something like "stoic_wilson" 
 
 Now, go back to the terminal window, stop the container and give it a more descriptive name, so that we could find it easier if there were many containers running.
 
-Stop the Running Container - Replace **your_container** below with an actual name that you want to call your running container.
+Stop the Running Container - Replace **your_container** below with an actual name of your running container:
 
 ```
 $ docker stop your_container
 ```
 
-Now, remove the container with the "rm" command
+Now, remove the container with the "rm" command:
 
 ```
 $ docker rm your_container
 ```
 
-Check to be sure that the container has been removed
+Check to be sure that the container has been removed:
 
 ```
 $ docker ps -a
@@ -199,13 +207,13 @@ $ docker ps -a
 
 > *Note - containers can be stopped and removed by using their name **(if there are no dependent image layers)**, their long id or their short id*
 
-Now run the container with a more descriptive name, such as "helloworld_app"
+Now run the container with a more descriptive name, such as "helloworld_app":
 
 ```
 $ docker run -d --name helloworld_app -p 80:80/tcp "karthequian/helloworld:latest"
 ```
 
-List all running containers again
+List all running containers again:
 
 ```
 $ docker ps
@@ -217,10 +225,9 @@ Stop and Remove the container
 
 ```
 $ docker stop helloworld_app
+
 $ docker rm helloworld_app
 ```
-
-Now, remove the container with the "rm" command
 
 We are done with this part of the HOL.
 
@@ -244,13 +251,13 @@ Follow Steps 1 and 2 from this exercise:
 
 Here is a synopsis of the steps in the above URL:
 
-Make a directory to store your Dockerfile
+Make a directory to store your Dockerfile:
 
 ```
 $ mkdir mydockerbuild
 ```
 
-Change to the new directory
+Change to the new directory:
 
 ```
 $ cd mydockerbuild
@@ -258,15 +265,15 @@ $ cd mydockerbuild
 
 In Step 1.3, use VI or editor of your choice, like nano.  
 
-To use VI, if you are on Oracle Linux
+To use VI, if you are on Oracle Linux:
 
 ```
 $ vi Dockerfile
 ```
 
-Create a text file name Dockerfile with these 3 lines.  
+Create a text file name Dockerfile with these 3 lines:
 
-> *If you are using VI, press the "i" key to enter insert mode.
+> *Note - if you are using VI, press the "i" key to enter insert mode.
 
 ```
 FROM docker/whalesay:latest
@@ -285,13 +292,13 @@ esc : w q
 
 > *Note - the docs for VI are here: [https://www.cs.colostate.edu/helpdocs/vi.html](https://www.cs.colostate.edu/helpdocs/vi.html)*
 
-Then per section 2, build your Docker image, be sure to include the "." at the end of the command
+Then per section 2, build your Docker image, be sure to include the "." at the end of the command:
 
 ```
 $ docker build -t docker-whale .
 ```
 
-Then per section 4, list the images on your host and run the docker-whale image as a container
+Then per section 4, list the images on your host and run the docker-whale image as a container:
 
 ```
 $ docker images
@@ -313,7 +320,7 @@ Registries store Docker images.  Using a registry is the first step towards movi
 
 **Tag and Push your new image to the Docker Hub registry.  In this exercise username will be your Docker Hub account name.**
 
-First, log into your Docker Hub account from the terminal
+First, log into your Docker Hub account from the terminal:
 
 ```
 $ docker login
@@ -346,13 +353,13 @@ Do you see the image that you pushed?
 
 Now, remove the local image and run the image from the registry
 
-To do this, you must first remove the stopped container by using its short id, not its name.  Find the short id.
+To do this, you must first remove the stopped container by using its short id, not its name.  Find the short id:
 
 ```
 $ docker ps -a 
 ```
 
-Copy the short id for the appropriate container, it will be similar to this format: ee31fe1dd8f8 and use the "rm" command to remove the container 
+Copy the short id for the appropriate container, it will be similar to this format: ee31fe1dd8f8 and use the "rm" command to remove the container: 
 
 ```
 $ docker rm short_id
@@ -360,19 +367,19 @@ $ docker rm short_id
 
 Now that the container is removed, you can remove the image and force the container to be run from the image on the Docker Hub with the "rmi" command
 
-Remove the image that you pushed to the Docker Hub
+Remove the image that you pushed to the Docker Hub:
 
 ```
 $ Docker rmi username/docker-whale
 ```
 
-Verify the images are removed.  View all Docker images with this command.
+Verify the images are removed.  View all Docker images with the images command:
 
 ```
 $ docker images
 ```
 
-Now, run the image directly from your repository on Dockerhub, and force a new pull of the image (because the image does not exist locally)
+Now, run the image directly from your repository on Dockerhub, and force a new pull of the image (because the image does not exist locally):
 
 ```
 $ docker run username/docker-whale
@@ -393,19 +400,19 @@ Install Docker compose
 
 > *Note - docs are here: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
 
-Use these specific below commands in your terminal for this exercise to install in your home directory.  This example is for Oracle Linux 6
+Use these specific below commands in your terminal for this exercise to install in your home directory.  This example is for Oracle Linux 6:
 
 ```
 $ curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /home/opc/docker-compose
 ```
 
-Change the executable permissions
+Change the executable permissions:
 
 ```
 $ chmod +x /home/opc/docker-compose
 ```
 
-Verify and check which version of Docker Compose was installed
+Verify and check which version of Docker Compose was installed:
 
 ```
 $ ./docker-compose --version
@@ -419,13 +426,13 @@ Follow these steps to create a simple Wordpress stack referenced here:
 
 Here is a synopsis of the steps in the above URL:
 
-Use an editor or VI to create a file named docker-compose.yml
+Use an editor or VI to create a file named "docker-compose.yml":
 
 ```
 vi docker-compose.yml
 ```
 
-that contains the following text **(important, copy and paste from the YAML below)
+that contains the following text **(important, copy and paste from the YAML below)**
 
 ```
 version: '2'
@@ -458,7 +465,7 @@ volumes:
      db_data:
 ```
 
-Save docker-compose.yml
+Save the docker-compose.yml:
 
 If you are using  VI, save the file by typing the Esc key - colon - w (for write) - q (for quit):
 
@@ -467,7 +474,7 @@ If you are using  VI, save the file by typing the Esc key - colon - w (for write
 esc : w q 
 ```
 
-Run the Wordpress stack by this command
+Run the Wordpress stack by this command:
 
 ```
 $ ./docker-compose up -d
@@ -475,7 +482,7 @@ $ ./docker-compose up -d
 
 Verify the running stack, by visiting the Wordpress setup page.
 
-In your browser, navigate to the IP of the Docker host, port 8000
+In your browser, navigate to the IP of the Docker host:
 
 ```
 http://docker_host_ip/wp-admin/install.php
@@ -484,8 +491,6 @@ http://docker_host_ip/wp-admin/install.php
 **Congratulations, you have successfully launched your first Wordpress app in Docker!**
 
 
-
-Repeat for next container
 
 ## Basics of Persistent storage
 
@@ -499,9 +504,9 @@ In short, unless a container volume is mounted to a persistent host volume, any 
 
 So let's explore how data is persisted in the Wordpress stack we just used.
 
-In your browser navigate to Host_IP and append it with the Wordpress initialization URL: /wp-admin/install.php.  
+In your browser navigate to Host_IP and append it with the Wordpress initialization URL: /wp-admin/install.php like this:  
 
-> *Note - this is the same setup URL you saw when we deployed with Docker Compose above and you may alread have this loaded in a browser tab, however this time, we are going to setup Wordpress and create blog post.*
+> *Note - this is the same setup URL you saw when we deployed with Docker Compose above and you may alread have this loaded in a browser tab, however this time, we are going to complete the Wordpress setup and create blog post.*
 
 ```
 http://docker_host_ip/wp-admin/install.php
@@ -559,20 +564,21 @@ $ docker stop short_id
 $ docker rm short_id
 ```
 
-Repeat for next container
+Repeat for next container until all are stopped and removed.
+
 
 Verify in the browser that the Wordpress blog post is gone by refreshing the page:
 
 <img src=images/043-refresh.png />
 
 
-Redeploy the Wordpress stack.  
+Redeploy the Wordpress stack:
 
 ```
 $ ./docker-compose up -d
 ```
 
-navigate back to the blog post URL that you noted, in your browser and refresh the page:
+Navigate back to the blog post URL that you noted, in your browser and refresh the page:
 
 <img src=images/047-refresh-blog.png />
 
@@ -583,7 +589,7 @@ The data persisted because it was written to the host volume, and then re-joined
 
 **Requirements: user account for Github and DockerHub**
 
-> If you do not have a Github account, get a free one here: [https://github.com/join](https://github.com/join) 
+> * Note - if you do not have a Github account, get a free one here: [https://github.com/join](https://github.com/join) 
 
 Now, you will explore another method of creating a image using GitHub and Docker Hub.
 
@@ -592,21 +598,28 @@ Now, you will explore another method of creating a image using GitHub and Docker
 
 **To begin, fork this Github Docker001 repo to your own**
 
-Log into you Github account: https://github.com/login
+Log into you Github account: 
 
-In your browser, navigate to this GitHub repository: https://github.com/oracle/cloud-native-devops-workshop/docker001 
+https://github.com/login
 
-Select the Fork button. 
+In your browser, navigate to this GitHub repository: 
+
+https://github.com/oracle/cloud-native-devops-workshop/docker001 
+
+
+Select the Fork button in for the particular GitHub repository:
 
 <img src=images/github-dockerhub_14.jpg />
 
 
-This will automatically copy this repo to your own GitHub account, where you will be able to edit it.
+This will automatically copy this repository to your own GitHub account, where you will be able to edit it as you need:
 
 <img src=images/github-dockerhub_9.jpg />
 
 
-Now, in your browser, in another tab, log into your Docker Hub Account: https://hub.docker.com/login
+Now, in your browser, in another tab, log into your Docker Hub Account: 
+
+https://hub.docker.com/login
 
 
 Within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
@@ -644,7 +657,7 @@ Select the docker001 repository:
 <img src=images/github-dockerhub_4.jpg />
 
 
-Make the repository name "hello-earth" and add a Short Description
+Make the repository name "hello-earth" and add a Short Description and press Save:
 
 <img src=images/github-dockerhub_10.jpg />
 
@@ -663,14 +676,14 @@ On the GitHub page, click on the link for "Index.html":
 <img src=images/2017-03-16_11-15-12.png />
 
 
-You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe the changes.
+You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe your changes.
 
 Edit the page via the pencil icon:
 
 <img src=images/050-edit-index.png />
 
 
-Make the following changes to Line 12, replacing your own name and city where it says myName and myCity
+Make the following changes to Line 12, replacing your own name and city where it says myName and myCity:
 
 <img src=images/2017-03-16_11-19-42.jpg />
 
@@ -680,9 +693,9 @@ Scroll Down and Commit your Changes.  Add a description and press the "Commit Ch
 <img src=images/052-commit-index.png />
 
 
-This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in index.html as part of the build process.  
+This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in index.html as part of the build process:  
 
-> *Note - if the automated build does not happen automatically, you can just use the "Trigger" button in the Build Settings tab to start an image build.
+> *Note - if the automated build does not happen automatically, you can just use the "Trigger" button in the Build Settings tab to start an image build.*
 
 <img src=images/github-dockerhub_3.jpg />
 
@@ -693,22 +706,21 @@ It will take a few minutes for this to complete in Docker Hub.  When it does, Su
 
 
 Back in your Docker CLI environment, run the new container:
+
 ```
 docker run -d -p80:80 "myDockerName/hello-earth"
 ```
 
-Once the container is running, verify the Host that the container is running on: 
-
-Visit the host’s IP  and observe your changes and a new Hello Earth contianer that you just built and ran!
+Once the container is running, visit the host’s IP and observe your changes and a new Hello Earth contianer that you just built and ran!
 
 <img src=images/github-dockerhub_15.jpg />
 
 
 Tweet to the world that you have created your own Hello Earth containerized app!
 
-'''
+```
 Check out the HelloEarth #Docker app that I just created.  It's posted in my Docker Hub https://hub.docker.com/r/myDockerName/hello-earth
-'''
+```
 
 **Congratulations!**  You have successfully completed this Hands On Lab!
 
