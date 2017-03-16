@@ -598,12 +598,12 @@ In your browser, navigate to this GitHub repository: https://github.com/oracle/c
 
 Select the Fork button. 
 
-	<img src=images/github-dockerhub_14.jpg />
+<img src=images/github-dockerhub_14.jpg />
 
 
 This will automatically copy this repo to your own GitHub account, where you will be able to edit it.
 
-	<img src=images/github-dockerhub_9.jpg />
+<img src=images/github-dockerhub_9.jpg />
 
 
 Now, in your browser, in another tab, log into your Docker Hub Account:
