@@ -664,7 +664,8 @@ Edit the page via the pencil icon:
 
 Make the following changes to Line 12, replacing your own name and city where it says myName and myCity
 
-**GET SCREENSHOT**
+<img src=images/2017-03-16_11-19-42.jpg />
+
 
 Scroll Down and Commit your Changes.  Add a description and press the "Commit Changes" button:
 
