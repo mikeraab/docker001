@@ -80,7 +80,7 @@ Additionally, the Docker Engine is the core piece of technology that allows you 
 Ok, so those are some of the mechanics of the technology, but why is Docker popular among all types of IT people?  Lets look at these proof points from Developers and IT Ops.
 
 <img src=images/004-why-containers.jpg />
-***
+
 
 Additonally, in speaking with hundreds of organizations that are exploring and using Docker, these are the core advantages that Docker brings.  
 
@@ -92,7 +92,7 @@ All of this is part of a transformation of technologies along a number of fronts
 <img src=images/006-evolution.jpg />
 
 
-##Verify Docker Engine Hands on Lab Environment
+## Verify Docker Engine Hands on Lab Environment
 
 In this first section you are going to verfify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](../master/Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
 
@@ -606,17 +606,25 @@ This will automatically copy this repo to your own GitHub account, where you wil
 <img src=images/github-dockerhub_9.jpg />
 
 
-Now, in your browser, in another tab, log into your Docker Hub Account
+Now, in your browser, in another tab, log into your Docker Hub Account:
 
 ```
 https://hub.docker.com/login
 ```
 
-** ADD LINK ACCOUNT SCREENSHOTS**
-
 Within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
 
 <img src=images/github-dockerhub_13.jpg />
+
+
+This will prompt you to link your GitHub account:
+
+<img src=images/2017-03-16_10-41-09.jpg />
+
+
+Select GitHub as shown here:
+
+<img src=images/2017-03-16_10-41-14.jpg />
 
 
 Select Create Auto-build:
