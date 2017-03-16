@@ -606,11 +606,8 @@ This will automatically copy this repo to your own GitHub account, where you wil
 <img src=images/github-dockerhub_9.jpg />
 
 
-Now, in your browser, in another tab, log into your Docker Hub Account:
+Now, in your browser, in another tab, log into your Docker Hub Account: https://hub.docker.com/login
 
-```
-https://hub.docker.com/login
-```
 
 Within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
 
@@ -654,7 +651,7 @@ Make the repository name "hello-earth" and add a Short Description
 
 Within the Build Settings tab, enter "/lab1" for the Dockerfile Location and press the "Save Changes" button: 
 
-<img src=images/github-dockerhub_8.jpg />
+<img src=images/2017-03-15_11-20-24.jpg />
 
 
 Back in your Github account navigate to the URL where you have forked the above Docker001 repo, and specifically open the "lab1" folder.  Replace your Github username in the below URL.
@@ -684,6 +681,8 @@ Scroll Down and Commit your Changes.  Add a description and press the "Commit Ch
 
 
 This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in index.html as part of the build process.  
+
+> *Note - if the automated build does not happen automatically, you can just use the "Trigger" button in the Build Settings tab to start an image build.
 
 <img src=images/github-dockerhub_3.jpg />
 
