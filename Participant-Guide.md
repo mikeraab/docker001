@@ -134,6 +134,9 @@ List all containers:
 ```
 $ docker ps -a
 ```
+Notice that the hello-world container, ran once and then exited:
+
+<img src=images/2017-03-16_13-40-42.jpg />
 
 In this excercise you will explore another Docker image from Docker Hub
 
