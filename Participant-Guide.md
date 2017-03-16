@@ -399,7 +399,7 @@ $ docker run username/docker-whale
 
 > *Note - if no tag is used, the default tag is "latest", and it is pulled from your registry*
 
-<img src=images/2017-03-16_14-17-38.jpg />
+<img src=images/2017-03-16_14-17-38-2.jpg />
 
 At this point please stop and remove all containers.  To do this for all containers, uses these commands:
 
