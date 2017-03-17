@@ -25,4 +25,4 @@ $ ssh opc@ip_address -i /users/yourName/folder/sshkey/privateKey
 
 ## If the VM is Oracle Linux on Oracle IaaS Compute:
 
-Follow this guidance on [docs.Oracle.com/cloud](https://docs.oracle.com/cloud/latest/stcomputecs/STCSG/GUID-D947E2CC-0D4C-43F4-B2A9-A517037D6C11.htm#STCSG-GUID-D947E2CC-0D4C-43F4-B2A9-A517037D6C11)
+Follow this guidance for Using Oracle Compute Cloud Service (IaaS) [docs.Oracle.com/cloud](https://docs.oracle.com/cloud/latest/stcomputecs/STCSG/GUID-D947E2CC-0D4C-43F4-B2A9-A517037D6C11.htm#STCSG-GUID-D947E2CC-0D4C-43F4-B2A9-A517037D6C11)
