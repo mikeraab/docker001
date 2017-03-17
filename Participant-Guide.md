@@ -776,7 +776,7 @@ Once the container is running, visit the docker host’s IP and observe your cha
 <img src=images/github-dockerhub_15.jpg />
 
 
-Tweet to the world that you have created your own HelloEarth containerized app! 
+Tweet to the world that you have created your own Hello Earth containerized app! 
 
 > *Note - remember to use your Docker Hub account name where it says "username" in the tweet.*
 
