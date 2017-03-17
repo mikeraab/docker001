@@ -240,9 +240,9 @@ We are done with this part of the HOL.
 
 ## Create a Dockerfile and Docker Image
 
-In this excersise you will build your wwn image from a Dockerfile
+In this excersise you will build your own image from a Dockerfile.
 
-About DockerFiles
+**About DockerFiles**
 
 A Dockerfile is a recipe that starts with a base image, typically a thin Linux OS distribution such as Alpine Linux, and then layers on an app and configuration.  [According to Docker](https://docs.docker.com/engine/reference/builder/): 
 
@@ -363,7 +363,7 @@ Do you see the image that you pushed?
 <img src=images/010-docker-hub.png />
 
 
-Now, remove the local image and run the image from the registry
+Now, remove the local image and run the image from the Docker Hub registry.
 
 To do this, you must first remove the stopped container by using its short id, not its name.  Find the short id:
 
@@ -377,21 +377,21 @@ Copy the short id for the appropriate container, it will be similar to this form
 $ docker rm short_id
 ```
 
-Now that the container is removed, you can remove the image and force the container to be run from the image on the Docker Hub with the "rmi" command
+Now that the container is removed, you can remove the image locally on the host, and force the container to be run from the image on the Docker Hub.  Use the "rmi" command to remove an image.
 
-Remove the image that you pushed to the Docker Hub:
+Remove the image locally that you pushed to the Docker Hub:
 
 ```
 $ Docker rmi username/docker-whale
 ```
 
-Verify the images are removed.  View all Docker images with the images command:
+Verify the images are removed from your host.  View all Docker images with the images command:
 
 ```
 $ docker images
 ```
 
-Now, run the image directly from your repository on Dockerhub, and force a new pull of the image (because the image does not exist locally):
+Now, run the image directly from your repository on Dockerhub, and force a new pull of the image, because the image does not exist locally:
 
 ```
 $ docker run username/docker-whale
@@ -418,9 +418,10 @@ $ docker rm $(docker ps -a -q)
 What is Docker Compose, why use it?
 
 According to Docker: Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration.
-Install Docker compose
 
-> *Note - docs are here: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
+**Install Docker compose.**
+
+> *Note - the docs are here: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
 
 Use these specific below commands in your terminal for this exercise to install in your home directory.  
 
@@ -463,7 +464,7 @@ Use an editor or VI to create a file named "docker-compose.yml":
 vi docker-compose.yml
 ```
 
-that contains the following text **(important, copy and paste from the YAML below)**
+Copy / paste the following text, or YAML:
 
 ```
 version: '2'
