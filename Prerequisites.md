@@ -8,11 +8,7 @@ These examples are only a few of the many that you might utilize to create a Doc
 ### Use a Worker node on your Oracle Container Cloud Service instance
 
 1. [Request An Oracle Cloud Trial](https://cloud.oracle.com/tryit)
-2. Create a Container Cloud Service Instance:
-
-* [Oracle Tutorial](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/container_cloud/creating_an_occs_service_instance/creating_occs_instance.html)
-
-* [Youtube Video](http://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19524)
+2. Create a Container Cloud Service Instance: See [Oracle Tutorial](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/container_cloud/creating_an_occs_service_instance/creating_occs_instance.html) | [Youtube Video](http://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19524)
 
 ### Use Oracle VirtualBox
 
