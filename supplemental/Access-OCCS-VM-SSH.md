@@ -4,7 +4,7 @@ If you are using an Oracle Container Cloud Service (OCCS) instance for this lab,
 
 You should have already provisioned your OCCS instance as part of the prework for this HOL.  
 
-The first step will be to login to one of the OCCS "worker nodes", or Docker host, and verify the Docker installation and check the version.  A worker node is simply a Docker Host/VM that can run Docker containers.
+The first step will be to SSH into one of the OCCS "worker nodes", or Docker host, and verify the Docker installation and check the version.  A worker node is simply a Docker Host/VM that can run Docker containers.
 
 First SSH into a Worker Node in your Pre-built ContainerCS instance using the SSH key that you used when you created the OCCS instance. 
 
