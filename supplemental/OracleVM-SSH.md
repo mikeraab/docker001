@@ -12,7 +12,7 @@ First SSH into a Worker Node in your Pre-built ContainerCS instance using the SS
 
 To find a Worker Node IP address, login to your Oracle Cloud My Services Portal and use one of the Public IPs from a Worker Node in the Container Cloud Service Console:
 
-<img src=/docker001/master/images/003-worker-ip.png />
+<img src=../images/003-worker-ip.png />
 
 
 Modify the below command with your Worker Node IP and the path for your private key:
