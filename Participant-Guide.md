@@ -553,6 +553,8 @@ Plus this volume statement for the database:
        - db_data:/var/lib/mysql
  ```
  
+The host volume is listed first, then the container volume, separated by a colon.  This binds any data written in the specified container volume path to the host volume.  When the container is stopped and rerun on the same host, it will pull any existing data from the host volume. 
+
 *Now you know the magic that we will now explore.*
 
 **Complete the Wordpress setup and create blog post.**
