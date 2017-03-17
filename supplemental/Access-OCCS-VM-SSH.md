@@ -1,8 +1,6 @@
-# Use these instructions to access a Oracle Linux VM via SSH
+# Use these instructions to access your Container Cloud Service Docker VM via SSH
 
-## If the VM is a Worker Node in Oracle Container Cloud Service:
-
-If you are using an Oracle Container Cloud Service (OCCS) instance for this lab, you can utilize its pre-built Linux VM, Docker Engine and UI.  
+If you are using an Oracle Container Cloud Service (OCCS) instance for this lab, you can utilize one its pre-built Linux VM (also called a Worker node), with is pre-installed Docker Engine.  
 
 You should have already provisioned your OCCS instance as part of the prework for this HOL.  
 
@@ -23,6 +21,4 @@ $ ssh opc@ip_address -i /users/yourName/folder/sshkey/privateKey
 
 > *Note - the above format is usable directly in a Mac terminal. If you are using a Windows computer, use an appropriate Windows SSH client, like Putty or another SSH client*
 
-## If the VM is Oracle Linux on Oracle IaaS Compute:
 
-Follow this guidance for Using Oracle Compute Cloud Service (IaaS) [docs.Oracle.com/cloud](https://docs.oracle.com/cloud/latest/stcomputecs/STCSG/GUID-D947E2CC-0D4C-43F4-B2A9-A517037D6C11.htm#STCSG-GUID-D947E2CC-0D4C-43F4-B2A9-A517037D6C11)
