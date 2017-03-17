@@ -538,6 +538,23 @@ In short, unless a container volume is mounted to a persistent host volume, any 
 
 So let's explore how data is persisted in the Wordpress stack we just used.
 
+Most importantly, in the Docker Compose YAML file, we used 2 volume statements, one for Wordpress and one for the DB.  
+
+For example, this statement in the YAML for Wordpress, allows for images to be retained in blog posts:
+```
+     volumes:
+       - /var/www/html:/var/www/html:rw
+```
+
+Plus this volume statement for the database:
+
+```
+     volumes:
+       - db_data:/var/lib/mysql
+ ```
+ 
+ Now you know the magic that we will now explore.
+
 **Complete the Wordpress setup and create blog post.**
 
 In your browser navigate to Host_IP and append it with the Wordpress initialization URL: /wp-admin/install.php like this:  
