@@ -1,6 +1,6 @@
 # Intro to Containers Hands On Lab
 
-This Hands on Lab (HOL) will take the particant through the basics of containerization, explore it's advantages and introduce Docker technology with entry level excersises.  The topics to be covered in this 2 hour session are:
+This Hands on Lab (HOL) will take the participant through the basics of containerization, explore it's advantages and introduce Docker technology with entry level excercises.  The topics to be covered in this 2 hour session are:
 
 1.  [Intro to Basic Container Concepts](../master/Participant-Guide.md#intro-to-basic-container-concepts)
 2.  [Verify Docker Engine Hands on Lab Environment](../master/Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
@@ -42,12 +42,12 @@ Containers have been around for many years.  Docker created a technology that wa
 
 However, there have been and still are variations on container technology.  Here are some of the technologies we have seen through the years.
 
-History of Linux Containers
+History of Linux Containers:
 
 <img src=images/002-container-history.png />
 
 
-Now, lets look at how a virtual machine (VM) is different from a container
+Now, let's look at how a virtual machine (VM) is different from a container.
 
 While containers may sound like a VM, the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the **entire guest operating system.**
 
@@ -58,7 +58,7 @@ Whereas, Containers include the application, all of its dependencies, but share 
 
 > *Note - at this time, Windows and Linux containers require that they run on their respective kernel base, therefore, Windows containers cannot run on Linux hosts and vice versa.*
 
-Docker images are a collection of files, which has everthing needed to run the software application inside the container.  However, they are ephemeral, meaning that any data that is written inside the container, while it is running, will not be retained.  
+Docker images are a collection of files, which have everthing needed to run the software application inside the container.  However, they are ephemeral, meaning that any data that is written inside the container, while it is running, will not be retained.  
 
 If the container is stopped and restarted from its image, the container will run exactly the same as the first time, absent of any changes made during the last run cycle.  Changes to the container either have to be made during the image creation process, using the Dockerfile that become part of the image, or data can be retained by mounting a persistent storage volume, from inside the container to the outside.  This will be explored further in the HOL exercises below. 
 
@@ -72,7 +72,7 @@ Each of these will be explored in this HOL.
 <img src=images/005-docker-terms.jpg />
 
 
-Additionally, the Docker Engine is the core piece of technology that allows you to run containers.  A in order for a container to run on any Linux host, at a minimum, the Docker Engine needs to be installed.
+Additionally, the Docker Engine is THE core piece of technology that allows you to run containers.  In order for a container to run on any Linux host, at a minimum, the Docker Engine needs to be installed.  Then the container can run on any Linux host where Docker Engine is installed, providing the benefit of portability, without doing any application specific configuration changes on each host.
 
 <img src=images/004-docker-engine.jpg />
 
@@ -94,7 +94,7 @@ All of this is part of a transformation of technologies along a number of fronts
 
 ## Verify Docker Engine Hands on Lab Environment
 
-In this first section you are going to verfify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](../master/Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
+In this first section you are going to verify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](../master/Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
 
 First, run as root, so that you do not have to preface everthing with sudo:
 
@@ -140,7 +140,7 @@ Notice that the hello-world container, ran once and then exited:
 
 <img src=images/2017-03-16_14-46-49.jpg />
 
-In this excercise you will explore another Docker image from Docker Hub
+In this excercise you will explore another Docker image from Docker Hub.
 
 **Browse to another public image Helloworld example on Docker Hub.  Run it.**
 
@@ -156,7 +156,7 @@ Pull the image from the Docker Hub Registry:
 $ docker pull karthequian/helloworld:latest
 ```
 
-Copy/Paste the Docker Run command from the Docker Hub page and add a -d option so the container runs in "detached" mode:
+Copy/Paste the Docker Run command from the Docker Hub page and add a "-d" option so the container runs in "detached" mode:
 
 > *Note - the "-d" option run the container in detached mode, as opposed to the foreground mode that you saw in the last exercise.  The benefit of this is that for longer running containers, it frees up your terminal window.*
 
@@ -228,7 +228,7 @@ $ docker ps
 
 > *Is the container easier to find now, especially that there is context to the name of the container?  Especially if there were many containers running?*
 
-Stop and Remove the container
+Stop and Remove the container:
 
 ```
 $ docker stop helloworld_app
