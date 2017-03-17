@@ -1,7 +1,9 @@
 ## Remaining Things to do yet in this repo
 
-
+- [ ] Proof participant guide
+- [ ] Create short guide on SSH to Oracle VM
 - [ ] Test windows and mac docker clients with hol exercises
+- [ ] Add Virtual Box pointers as an option for Docker Environment CLI
 
 ## Completed items
 
