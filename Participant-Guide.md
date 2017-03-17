@@ -242,7 +242,7 @@ We are done with this part of the HOL.
 
 ## Create a Dockerfile and Docker Image
 
-In this excersise you will build your own image from a Dockerfile.
+In this excercise you will build your own image from a Dockerfile.
 
 **About DockerFiles**
 
@@ -413,7 +413,7 @@ $ docker rm $(docker ps -a -q)
 
 ## Install Docker Compose
 
-> *Note -if the Docker Engine setup you used, installed direcly on Windows 10 or your Mac, most likely, Docker Compose is installed.
+> *Note -if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely, Docker Compose is installed.
 
 **Introduction to Docker Compose**
 
@@ -538,9 +538,12 @@ In short, unless a container volume is mounted to a persistent host volume, any 
 
 So let's explore how data is persisted in the Wordpress stack we just used.
 
+**Complete the Wordpress setup and create blog post.**
+
 In your browser navigate to Host_IP and append it with the Wordpress initialization URL: /wp-admin/install.php like this:  
 
-> *Note - this is the same setup URL you saw when we deployed with Docker Compose above and you may alread have this loaded in a browser tab, however this time, we are going to complete the Wordpress setup and create blog post.*
+> *Note - this is the same setup URL you saw when you deployed with Docker Compose above.  You may already have this loaded in a browser tab.*
+
 
 ```
 http://docker_host_ip/wp-admin/install.php
