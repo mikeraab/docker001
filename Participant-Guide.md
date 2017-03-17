@@ -553,7 +553,7 @@ Plus this volume statement for the database:
        - db_data:/var/lib/mysql
  ```
  
- Now you know the magic that we will now explore.
+*Now you know the magic that we will now explore.*
 
 **Complete the Wordpress setup and create blog post.**
 
