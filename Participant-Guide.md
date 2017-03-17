@@ -44,7 +44,7 @@ However, there have been and still are variations on container technology.  Here
 
 History of Linux Containers:
 
-<img src=../images/002-container-history.png />
+<img src=/images/002-container-history.png />
 
 
 Now, let's look at how a virtual machine (VM) is different from a container.
