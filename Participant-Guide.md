@@ -96,6 +96,8 @@ All of this is part of a transformation of technologies along a number of fronts
 
 In this first section you are going to verify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](../master/Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
 
+> *Note - if you are using one of the Workder Nodes in an Oracle Container Cloud Service instance, as your Docker Engine environment, [access it via SSH per these instructions](../master/supplemental/Access-OCCS-VM-SSH.md)
+
 First, run as root, so that you do not have to preface everthing with sudo:
 
 ```
