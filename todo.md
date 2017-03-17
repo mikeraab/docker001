@@ -1,10 +1,8 @@
 ## Remaining Things to do yet in this repo
 
-- [ ] Proof participant guide
-- [ ] Create short guide on SSH to Oracle VM
 - [ ] Test windows and mac docker clients with hol exercises
 - [ ] Add Virtual Box pointers as an option for Docker Environment CLI
-- [ ] Add downloadable Dockerfile and docker-compose.yml for sections 4 and 7
+- [ ] Add downloadable Dockerfile and docker-compose.yml for sections 4 and 7 ?
 
 ## Completed items
 
@@ -14,6 +12,8 @@
     
     [embeded as lab1](../master/lab1)
    
+- [x] Proof participant guide
+- [x] Create short guide on SSH to Oracle VM/OCCS Worker node
 - [x] Take screenshots of forking the repo
 - [x] Take screenshots of linking github and docker hub
 - [x] Take screenshots of edits to index.html
