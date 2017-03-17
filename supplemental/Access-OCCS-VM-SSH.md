@@ -1,8 +1,8 @@
 # Use these instructions to access your Container Cloud Service Docker VM via SSH
 
-If you are using an Oracle Container Cloud Service (OCCS) instance for this lab, you can utilize one its pre-built Linux VM (also called a Worker node), with is pre-installed Docker Engine.  
+If you are using an Oracle Container Cloud Service (OCCS) instance for this lab, you can utilize one its pre-built Oracle Linux VM (also called a Worker node), with its pre-installed Docker Engine.  
 
-You should have already provisioned your OCCS instance as part of the prework for this HOL.  
+**You should have already provisioned your OCCS instance as part of the prework for this HOL, if using this method.**
 
 The first step will be to SSH into one of the OCCS "worker nodes", or Docker host, and verify the Docker installation and check the version.  A worker node is simply a Docker Host/VM that can run Docker containers.
 
@@ -13,7 +13,7 @@ To find a Worker Node IP address, login to your Oracle Cloud My Services Portal 
 <img src=../images/003-worker-ip.png />
 
 
-Modify the below command with your Worker Node IP and the path for your private key:
+Modify the below command with your Worker node IP and the path for your private key:
 
 ```
 $ ssh opc@ip_address -i /users/yourName/folder/sshkey/privateKey
