@@ -625,7 +625,7 @@ The data persisted because it was written to the host volume, and then re-joined
 
 Now, you will explore another method of creating a image using GitHub and Docker Hub.
 
-> *Note - in this exercise you will build a Dockerfile from Github on Docker Hub, deploy the latest version, then modify the Index.html in Github to trigger an automated Docker image build in DockerHub, and then verify the new build and image as a running container in.*
+> *Note - in this exercise you will fork an existing hello-world like repository, that you will call hello-earth, then modify its web page: Index.html in Github to trigger an automated Docker image build in Docker Hub.  You will then verify the successful build and run the image as a container in your Docker environment.*
 
 
 **To begin, fork this Github Docker001 repo to your own**
@@ -639,7 +639,7 @@ In your browser, navigate to this GitHub repository:
 https://github.com/oracle/cloud-native-devops-workshop/docker001 
 
 
-Select the Fork button in for the particular GitHub repository:
+Select the "Fork" button in for the particular GitHub repository:
 
 <img src=images/github-dockerhub_14.jpg />
 
@@ -659,7 +659,7 @@ Within your Docker Hub account, select "Create Automated Build" in the Top Menu 
 <img src=images/github-dockerhub_13.jpg />
 
 
-This will prompt you to link your GitHub account:
+This will prompt you to link your GitHub account, so that Docker Hub can pull the source code:
 
 <img src=images/2017-03-16_10-41-09.jpg />
 
@@ -684,12 +684,14 @@ Select Create Auto-build:
 <img src=images/github-dockerhub_11.jpg />
 
 
-Select the docker001 repository:
+Select the "docker001" repository:
 
 <img src=images/github-dockerhub_4.jpg />
 
 
 Make the repository name "hello-earth" and add a Short Description and press Save:
+
+> *Note - naming the repository will also result in the image name being "hello-earth", after you do the first build.*
 
 <img src=images/github-dockerhub_10.jpg />
 
@@ -708,7 +710,7 @@ On the GitHub page, click on the link for "Index.html":
 <img src=images/2017-03-16_11-15-12.png />
 
 
-You are going to modify this Index.html to create a new "Hello Earth" page, this will automatically trigger a new image build in Docker hub.  You will then run the resulting container to observe your changes.
+You are going to modify this Index.html to create a new "Hello Earth" web page, this will automatically trigger a new (and first) image build in Docker Hub.  You will then run the resulting image as a container to observe your changes.
 
 Edit the page via the pencil icon:
 
@@ -720,38 +722,42 @@ Make the following changes to Line 12, replacing your own name and city where it
 <img src=images/2017-03-16_11-19-42.jpg />
 
 
-Scroll Down and Commit your Changes.  Add a description and press the "Commit Changes" button:
+Scroll down and Commit your Changes.  Add a description and press the "Commit Changes" button:
 
 <img src=images/052-commit-index.png />
 
 
-This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in index.html as part of the build process:  
+This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in Index.html as part of the build process:  
 
-> *Note - if the automated build does not happen automatically, you can just use the "Trigger" button in the Build Settings tab to start an image build.*
+> *Note - if the automated build does not happen automatically, you can just use the "Trigger" button in the Docker Hub - Build Settings tab to manually start an image build.*
 
 <img src=images/github-dockerhub_3.jpg />
 
 
-It will take a few minutes for this to complete in Docker Hub.  When it does, Success will be noted in the Status column:
+The build will take a few minutes to complete in Docker Hub.  When it does, Success will be noted in the Status column:
+
+> *Note - you may need to refresh your browser tab to see the updated status.*
 
 <img src=images/github-dockerhub_1.jpg />
 
 
-Back in your Docker CLI environment, run the new container:
+When you have a successful built, go back into your Docker CLI environment, run the new container.  Replace your Docker Hub name for "username" in the below command:
 
 ```
-docker run -d -p80:80 "myDockerName/hello-earth"
+docker run -d -p80:80 "username/hello-earth"
 ```
 
-Once the container is running, visit the host’s IP and observe your changes and a new Hello Earth contianer that you just built and ran!
+Once the container is running, visit the docker host’s IP and observe your changes for a new hello-earth contianer that you just built and ran!
 
 <img src=images/github-dockerhub_15.jpg />
 
 
-Tweet to the world that you have created your own Hello Earth containerized app!
+Tweet to the world that you have created your own HelloEarth containerized app! 
+
+> *Note - remember to use your Docker Hub account name where it says "username" in the tweet.*
 
 ```
-Check out the HelloEarth #Docker app that I just created.  It's posted in my Docker Hub https://hub.docker.com/r/myDockerName/hello-earth
+Check out my Hello Earth #Docker app that I just created in my #OracleCode HOL.  It's in my Docker Hub https://hub.docker.com/r/username/hello-earth
 ```
 
 **Congratulations!**  You have successfully completed this Hands On Lab!
