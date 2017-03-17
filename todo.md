@@ -4,6 +4,7 @@
 - [ ] Create short guide on SSH to Oracle VM
 - [ ] Test windows and mac docker clients with hol exercises
 - [ ] Add Virtual Box pointers as an option for Docker Environment CLI
+- [ ] Add downloadable Dockerfile and docker-compose.yml for sections 4 and 7
 
 ## Completed items
 
