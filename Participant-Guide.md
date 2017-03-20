@@ -500,9 +500,6 @@ volumes:
 ```
 
 
-This file is also [located here](../master/supplemental/docker-compose.yml)
-
-
 Save the docker-compose.yml:
 
 If you are using  VI, save the file by typing the Esc key - colon - w (for write) - q (for quit):
