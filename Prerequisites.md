@@ -31,4 +31,7 @@ The Docker Engine environment **needs to be completed prior to starting the Hand
 1. [Request An Oracle Cloud Trial](https://cloud.oracle.com/tryit)
 2. [See the first 3 sections of this blog for a quick install on an Oracle Linux 6 Cloud VM](https://community.oracle.com/community/cloud_computing/infrastructure-as-a-service-iaas/oracle-container-cloud-service/blog/2017/01/26/the-fast-path-to-a-private-docker-registry-on-oracle-public-cloud)
 
+
++++++++
+
 > *Note - after you have your Docker environment built, you will be ready to start the [Participant Guide](../master/Participant-Guide.md)* 
