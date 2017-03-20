@@ -98,7 +98,7 @@ In this first section you are going to verify that you are able to connect to yo
 
 > *Note - if you are using one of the Workder Nodes in an Oracle Container Cloud Service instance, as your Docker Engine environment, [access it via SSH per these instructions](../master/supplemental/Access-OCCS-VM-SSH.md)
 
-First, run as root, so that you do not have to preface everthing with sudo:
+**Optional** - for convenience, run as root, so that you do not have to preface everthing with sudo (not applicable if you are running Docker for Windows):
 
 ```
 $ sudo -s
