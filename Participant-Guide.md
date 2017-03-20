@@ -413,7 +413,7 @@ $ docker rm $(docker ps -a -q)
 
 ## Install Docker Compose
 
-> *Note -if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely, Docker Compose is installed.
+> *Note - if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely, Docker Compose is installed.*
 
 **Introduction to Docker Compose**
 
@@ -427,7 +427,9 @@ According to Docker: Docker Compose is a tool for defining and running multi-con
 
 Here is a synopsis of the steps in the above URL:
 
-Be sure that you are in your home directory:
+Be sure that you are in your home directory, this is where you will create your first docker-compose.yml file:
+
+> *Note - you can use seperate sub-directories under your home directory, to store subsequent apps, each created with their own Docker Compose YAML file*
 
 ```
 $ cd ~
