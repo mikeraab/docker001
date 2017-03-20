@@ -1,7 +1,7 @@
 # hello earth
 Another hello world type docker container example
 
-This example is used for this Hands On Lab and runs on port :80
+This example is used for this Hands On Lab and runs on host port 80
 
 Fork this example to your GitHub account, then after you build it in your Docker Hub account, replace "username" with your Docker Hub user name in the Docker commands below.
 
