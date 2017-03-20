@@ -425,7 +425,7 @@ According to Docker: Docker Compose is a tool for defining and running multi-con
 
 > *Note - the docs are here: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
 
-Use these specific below commands in your terminal for this exercise to install in your home directory.  
+Here is a synopsis of the steps in the above URL:
 
 Be sure that you are in your home directory:
 
@@ -435,21 +435,21 @@ $ cd ~
 $ pwd
 ```
 
-Then, uses this curl command to install Docker Compose:
+Then, use this curl command to install Docker Compose:
 ```
-$ curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
+$ curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
 Change the executable permissions:
 
 ```
-$ chmod +x /home/opc/docker-compose
+$ chmod +x /usr/local/bin/docker-compose
 ```
 
 Verify and check which version of Docker Compose was installed:
 
 ```
-$ ./docker-compose --version
+$ docker-compose --version
 ```
 
 ## Create a Wordpress "stack"
@@ -512,7 +512,7 @@ esc : w q
 Run the Wordpress stack by this command:
 
 ```
-$ ./docker-compose up -d
+$ docker-compose up -d
 ```
 
 Verify the running stack, by visiting the Wordpress setup page.
