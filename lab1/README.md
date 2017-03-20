@@ -7,10 +7,10 @@ Fork this example to your GitHub account, then after you build it in your Docker
 
 To pull this image: 
 ```
-docker pull myDockerUser/helloworld:latest
+docker pull username/hello-earth:latest
 ```
 
 To run this image: 
 ```
-docker run -p 80:80/tcp "myDockerUser/helloworld:latest"
+docker run -d -p 80:80/tcp "username/hello-earth:latest"
 ```
