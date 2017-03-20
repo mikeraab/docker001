@@ -648,7 +648,7 @@ The data persisted because it was written to the host volume, and then re-joined
 
 **Requirements: user account for Github and DockerHub**
 
-> * Note - if you do not have a Github account, get a free one here: [https://github.com/join](https://github.com/join) 
+> *Note - if you do not have a Github account, get a free one here: [https://github.com/join](https://github.com/join)* 
 
 Now, you will explore another method of creating a image using GitHub and Docker Hub.
 
