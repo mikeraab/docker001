@@ -146,13 +146,13 @@ In this excercise you will explore another Docker image from Docker Hub.
 
 **Browse to another public image Helloworld example on Docker Hub.  Run it.**
 
-Open a browser and go to this URL:
+In this excercise you will use this Docker Hub image:
 
 [https://hub.docker.com/r/karthequian/helloworld](https://hub.docker.com/r/karthequian/helloworld)
 
 Pull the image from the Docker Hub Registry:
 
->  *Note - observe how the layers are pulled individually*
+>  *Note - observe how the layers are pulled individually.  Docker image files are composed of multiple layers, for more information, read the [Docker docs here about images and layers](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/)*
 
 ```
 $ docker pull karthequian/helloworld:latest
