@@ -284,7 +284,7 @@ $ vi Dockerfile
 
 Create a text file name Dockerfile with these 3 lines:
 
-> *Note - if you are using VI, press the "i" key to enter insert mode.
+> *Note - if you are using VI, press the "i" key first to enter insert mode, before you paste.
 
 ```
 FROM docker/whalesay:latest
@@ -344,7 +344,7 @@ When prompted, enter your Docker account username (lowercase), password and emai
 
 Now, tag and push your new docker-whale image to your account on Docker Hub
 
-Substitute your Docker username below
+Substitute your Docker **username** below
 
 ```
 $ docker tag docker-whale:latest username/docker-whale:latest
@@ -356,7 +356,7 @@ Push the Docker image to your account.  This will create a new repository called
 $ docker push username/docker-whale:latest
 ```
 
-Navigate to your account page in Docker Hub via this URL, substituting your username:
+Navigate to your account page in Docker Hub via this URL, substituting your **username**:
 
 [https://hub/docker.com/r/username](https://hub.docker.com/r/username)
 
@@ -384,7 +384,7 @@ Now that the container is removed, you can remove the image locally on the host,
 Remove the image locally that you pushed to the Docker Hub:
 
 ```
-$ Docker rmi username/docker-whale
+$ docker rmi username/docker-whale
 ```
 
 Verify the images are removed from your host.  View all Docker images with the images command:
@@ -465,7 +465,7 @@ Here is a synopsis of the steps in the above URL:
 Use an editor or VI to create a file named "docker-compose.yml":
 
 ```
-vi docker-compose.yml
+$ vi docker-compose.yml
 ```
 
 Copy / paste the following text, or YAML:
