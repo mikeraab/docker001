@@ -517,15 +517,15 @@ Run the Wordpress stack by this command:
 $ docker-compose up -d
 ```
 
-Verify the running stack, by visiting the Wordpress setup page.
+**Verify the running stack, by visiting the Wordpress setup page.**
 
-In your browser, navigate to the IP of the Docker host:
+In your browser, copy the below URL, using your host IP, to initiate the Wordpress setup:
 
-
+```
 http://host_ip/wp-admin/install.php
+```
 
-
-> *Note - if the following error is observed on a Docker for Mac environment, try to restarting the Docker service on the Mac, to allow writes to /var/www/html*
+> *Note - Docker for Mac users - if the following error is observed, try restarting the Docker service on the Mac, to allow writes to /var/www/html*
 
 ```
 ERROR: for wordpress  Cannot start service wordpress: Mounts denied: 
