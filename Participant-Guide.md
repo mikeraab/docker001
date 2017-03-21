@@ -521,8 +521,18 @@ Verify the running stack, by visiting the Wordpress setup page.
 
 In your browser, navigate to the IP of the Docker host:
 
+
+http://host_ip/wp-admin/install.php
+
+
+> *Note - if the following error is observed on a Docker for Mac environment, try to restarting the Docker service on the Mac, to allow writes to /var/www/html*
+
 ```
-http://docker_host_ip/wp-admin/install.php
+ERROR: for wordpress  Cannot start service wordpress: Mounts denied: 
+The path /var/www/html
+is not shared from OS X and is not known to Docker.
+You can configure shared paths from Docker -> Preferences... -> File Sharing.
+See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
 ```
 
 **Congratulations, you have successfully launched your first Wordpress app in Docker!**
@@ -771,7 +781,7 @@ The build will take a few minutes to complete in Docker Hub.  When it does, Succ
 When you have a successful built, go back into your Docker CLI environment, run the new container.  Replace your Docker Hub name for "username" in the below command:
 
 ```
-docker run -d -p80:80 "username/hello-earth"
+$ docker run -d -p80:80 "username/hello-earth"
 ```
 
 Once the container is running, visit the docker host’s IP and observe your changes for a new hello-earth contianer that you just built and ran!
