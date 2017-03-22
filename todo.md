@@ -1,7 +1,5 @@
 ## Remaining Things to do yet in this repo
 
-- [ ] Test docker for windows and mac docker clients with hol exercises
-
 - [ ] Dry run with team
 
 ## Completed items
@@ -21,3 +19,4 @@
 - [x] ported content and screenshots to participant guide
 - [x] readme is solid
 - [x] pre-reqs written
+- [x] Test docker for windows and mac docker clients with hol exercises
