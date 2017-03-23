@@ -67,12 +67,12 @@ If the container is stopped and restarted from its image, the container will run
 
 Jumping back a bit, there is a new nomenclature that Docker introduces, here are terms that you will need to be familiar with.  
 
-Each of these will be explored in this HOL.
+Each of these Docker technologies will be explored in this HOL.  It's important to note that this core technology is open source.  There are other technologies in the greater ecosystem, that could be open source, or licensened or even a hybrid, with a paid support option.
 
 <img src=images/005-docker-terms.jpg />
 
 
-Additionally, the Docker Engine is THE core piece of technology that allows you to run containers.  In order for a container to run on any Linux host, at a minimum, the Docker Engine needs to be installed.  Then the container can run on any Linux host where Docker Engine is installed, providing the benefit of portability, without doing any application specific configuration changes on each host.
+The Docker Engine is THE core piece of technology that allows you to run containers.  In order for a container to run on any Linux host, at a minimum, the Docker Engine needs to be installed.  Then the container can run on any Linux host where Docker Engine is installed, providing the benefit of portability, without doing any application specific configuration changes on each host.
 
 <img src=images/004-docker-engine.jpg />
 
