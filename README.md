@@ -13,4 +13,4 @@ An intro to containers covering essential concepts and an entry level Hands on L
 
 The [Participant Guide](../master/Participant-Guide.md) walks you through a step by step Hands On Lab session, expected to take about 2 hours.   
 
-This Hands on Lab (HOL) will take the particant through the basics of containerization, explore it's advantages and introduce Docker technology with entry level excersises.
+This Hands on Lab (HOL) will take the particant through the basics of containerization, explore it's advantages and introduce Docker technology with entry level excercises.
