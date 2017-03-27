@@ -8,7 +8,7 @@ This lab is designed for people with no prior experience with Docker who want to
 
 > *Note - prior to starting this Hand On Lab, please setup your laptop with access to some Docker Engine environment where you can run Docker commands in the CLI.*
 
-* Required - a pre-configured Docker-Engine environment to do the excercises in the Hands On Lab
+* **Required** - a pre-configured Docker-Engine environment to do the excercises in the Hands On Lab
 * **See [Prerequisites](../master/Prerequisites.md)**
 
 
