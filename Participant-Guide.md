@@ -28,6 +28,8 @@ This Hands on Lab (HOL) will take the participant through the basics of containe
 
 * A Github account
 
+***
+
 ## Intro to Basic Container Concepts
 
 A container is a runtime instance of a docker image.
@@ -91,6 +93,7 @@ All of this is part of a transformation of technologies along a number of fronts
 
 <img src=images/006-evolution.jpg />
 
+***
 
 ## Verify Docker Engine Hands on Lab Environment
 
@@ -115,6 +118,8 @@ If Docker is installed and running, you should see an output of something like t
 ```
 Docker version 1.1x.x, build 57bf6fd
 ```
+
+***
 
 ## Hello Helloworld
 
@@ -141,6 +146,8 @@ $ docker ps -a
 Notice that the hello-world container, ran once and then exited:
 
 <img src=images/2017-03-16_14-46-49.jpg />
+
+***
 
 In this excercise you will explore another Docker image from Docker Hub.
 
@@ -173,6 +180,7 @@ Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Ho
 
 <img src=images/004-hello-world.png />
 
+***
 
 You are now actually using an application that is in the Docker container.  Refresh the browser and observe how the visits counts increments.  This is a live application. A simple example, but an example of the experience of using an application running in a container, which is no different than if it was not running in a container.
 
@@ -189,6 +197,8 @@ $ docker ps
 Notice that Docker has assigned a container name, something like "ecstatic_lamport" in the below?  What name did Docker give your container?  Remember this name, as we will use it in a bit.
 
 <img src=images/2017-03-16_13-49-25.jpg />
+
+***
 
 > *Note - unless you specify a container name, Docker will assign a similar 2 part name automatically*
 
@@ -239,6 +249,8 @@ $ docker rm helloworld_app
 ```
 
 We are done with this part of the HOL.
+
+***
 
 ## Create a Dockerfile and Docker Image
 
@@ -323,6 +335,7 @@ Notice the output in the terminal, the container will run once, then stop.
 
 <img src=images/2017-03-16_14-10-47.jpg /> 
 
+***
 
 ## Push an Image to your Docker Hub Account
 
@@ -364,6 +377,7 @@ Do you see the image that you pushed?
 
 <img src=images/010-docker-hub.png />
 
+***
 
 Now, remove the local image and run the image from the Docker Hub registry.
 
@@ -411,6 +425,8 @@ $ docker stop $(docker ps -a -q)
 $ docker rm $(docker ps -a -q)
 ```
 
+***
+
 ## Install Docker Compose
 
 > *Note - if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely, Docker Compose is installed.*
@@ -453,6 +469,8 @@ Verify and check which version of Docker Compose was installed:
 ```
 $ docker-compose --version
 ```
+
+***
 
 ## Create a Wordpress "stack"
 
@@ -537,7 +555,7 @@ See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
 
 **Congratulations, you have successfully launched your first Wordpress app in Docker!**
 
-
+***
 
 ## Basics of Persistent storage
 
@@ -585,41 +603,49 @@ First, select your language:
 
 <img src=images/033-wp-setup1.png />
 
+***
 
 Setup the Wordpress login details.  Be sure to keep the Username and Password in your notes:
 
 <img src=images/034-wp-setup2.png />
 
+***
 
 Click the "log In" button to log into to Wordpress:
 
 <img src=images/034-wp-setup2.png />
 
+***
 
 Login using the credentials you created earlier:
 
 <img src=images/036-wp-login2.png />
 
+***
 
 Select "Write your first blog post" in the Next Steps section:
 
 <img src=images/037-write-blog.png />
 
+***
 
 Create a sample blog post.  Include an image of your choosing, if you would like and click Publish:
 
 <img src=images/038-publish-blog.png />
 
+***
 
 Click on the "Permalink" to navigate to the blog post:
 
 <img src=images/039-permalink.png />
 
+***
 
 Copy the Permalink URL of the blog post and keep this in your notes, as you will need it later:
 
 <img src=images/040-view-blog.png />
 
+***
 
 Stop and Remove the running Wordpress and Database containers by using their short id.
 
@@ -640,6 +666,7 @@ Verify in the browser that the Wordpress blog post is gone by refreshing the pag
 
 <img src=images/043-refresh.png />
 
+***
 
 Redeploy the Wordpress stack:
 
@@ -651,8 +678,11 @@ Navigate back to the blog post URL that you noted, in your browser and refresh t
 
 <img src=images/047-refresh-blog.png />
 
+***
 
 The data persisted because it was written to the host volume, and then re-joined to the containers when they were re-deployed on the same hosts.
+
+***
 
 ## Use Github and Docker Hub together to build an Image and Run the Container
 
