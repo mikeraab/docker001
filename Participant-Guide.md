@@ -134,6 +134,8 @@ Since the "hello-world" image is not available locally on the host, the command 
 
 <img src=images/2017-03-16_13-40-42.jpg />
 
+***
+
 **Congratulations, you have just run your first Docker container!**
 
 List all containers: 
@@ -416,6 +418,8 @@ $ docker run username/docker-whale
 > *Note - if no tag is used, the default tag is "latest", and it is pulled from your registry*
 
 <img src=images/2017-03-16_14-17-38-2.jpg />
+
+***
 
 At this point please stop and remove all containers.  To do this for all containers, uses these commands:
 
