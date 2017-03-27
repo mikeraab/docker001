@@ -680,11 +680,13 @@ Select the "Fork" button in for the particular GitHub repository:
 
 <img src=images/github-dockerhub_14.jpg />
 
+***
 
 This will automatically copy this repository to your own GitHub account, where you will be able to edit it as you need:
 
 <img src=images/github-dockerhub_9.jpg />
 
+***
 
 Now, in your browser, in another tab, log into your Docker Hub Account: 
 
@@ -695,31 +697,37 @@ Within your Docker Hub account, select "Create Automated Build" in the Top Menu 
 
 <img src=images/github-dockerhub_13.jpg />
 
+***
 
 This will prompt you to link your GitHub account, so that Docker Hub can pull the source code:
 
 <img src=images/2017-03-16_10-41-09.jpg />
 
+***
 
 Select GitHub as shown here:
 
 <img src=images/2017-03-16_10-41-14.jpg />
 
+***
 
 Select for both Public and Private repositories:
 
 <img src=images/2017-03-16_10-41-23.jpg />
 
+***
 
 Again, within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
 
 <img src=images/github-dockerhub_13.jpg />
 
+***
 
 Select Create Auto-build:
 
 <img src=images/github-dockerhub_11.jpg />
 
+***
 
 Select the "docker001" repository:
 
