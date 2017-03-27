@@ -1,12 +1,12 @@
 # Hands On Lab for Docker Containers - Entry Level
 
-An intro to containers with entry level Hands on Lab
+An intro to containers covering essential concepts and an entry level Hands on Lab.  This lab is designed for people with no prior experience with Docker who want to learn the core concepts and basics.
 
 ### Pre-work:
 
 > *Note - prior to starting this Hand On Lab, please setup your laptop with access to some Docker Engine environment where you can run Docker commands in the CLI.*
 
-* Required - a pre-configured Docker-Engine environment - See [Prerequisites](../master/Prerequisites.md)
+* Required - a pre-configured Docker-Engine environment to do the excercises in the Hands On Lab - See [Prerequisites](../master/Prerequisites.md)
 
 
 ### Use the Participant Guide to complete the Hands On Lab:
