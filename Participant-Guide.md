@@ -151,11 +151,11 @@ Notice that the hello-world container, ran once and then exited:
 
 ***
 
-In this excercise you will explore another Docker image from Docker Hub.
+In this exercise you will explore another Docker image from Docker Hub.
 
 **Browse to another public image Helloworld example on Docker Hub.  Run it.**
 
-In this excercise you will use this Docker Hub image:
+Use this Docker Hub image:
 
 [https://hub.docker.com/r/karthequian/helloworld](https://hub.docker.com/r/karthequian/helloworld)
 
