@@ -1,6 +1,6 @@
 # Intro to Containers Hands On Lab
 
-This Hands on Lab (HOL) will take the participant through the basics of containerization, explore it's advantages and introduce Docker technology with entry level excercises.  The topics to be covered in this 2 hour session are:
+This Hands on Lab (HOL) will take the participant through the basics of containerization, explore it's advantages and introduce Docker technology with entry level exercises.  The topics to be covered in this 2 hour session are:
 
 1.  [Intro to Basic Container Concepts](../master/Participant-Guide.md#intro-to-basic-container-concepts)
 2.  [Verify Docker Engine Hands on Lab Environment](../master/Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
@@ -101,7 +101,7 @@ In this first section you are going to verify that you are able to connect to yo
 
 > *Note - if you are using one of the Worker Nodes in an Oracle Container Cloud Service instance, as your Docker Engine environment, [access it via SSH per these instructions](../master/supplemental/Access-OCCS-VM-SSH.md)
 
-**Optional** - for convenience, run as root, so that you do not have to preface everthing with sudo (not applicable if you are running Docker for Windows):
+**Optional** - for convenience, run as root, so that you do not have to preface everything with sudo (not applicable if you are running Docker for Windows):
 
 ```
 $ sudo -s
