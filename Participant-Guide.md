@@ -1,6 +1,6 @@
 # Intro to Containers Hands On Lab
 
-This Hands on Lab (HOL) will take the participant through the basics of containerization, explore it's advantages and introduce Docker technology with entry level exercises.  The topics to be covered in this 2 hour session are:
+This Hands on Lab (HOL) will take the participant through the basics of containerization, explore its advantages and introduce Docker technology with entry level exercises.  The topics to be covered in this 2 hour session are:
 
 1.  [Intro to Basic Container Concepts](../master/Participant-Guide.md#intro-to-basic-container-concepts)
 2.  [Verify Docker Engine Hands on Lab Environment](../master/Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
@@ -32,7 +32,7 @@ This Hands on Lab (HOL) will take the participant through the basics of containe
 
 ## Intro to Basic Container Concepts
 
-A container is a runtime instance of a docker image.
+A container is a runtime instance of a Docker image.
 
 [https://docs.docker.com/engine/reference/glossary/#/container](https://docs.docker.com/engine/reference/glossary/#/container)
 
@@ -69,7 +69,7 @@ If the container is stopped and restarted from its image, the container will run
 
 Jumping back a bit, there is a new nomenclature that Docker introduces, here are terms that you will need to be familiar with.  
 
-Each of these Docker technologies will be explored in this HOL.  It's important to note that this core technology is open source.  There are other technologies in the greater ecosystem, that could be open source, or licensened or even a hybrid, with a paid support option.
+Each of these Docker technologies will be explored in this HOL.  It's important to note that this core technology is open source.  There are other technologies in the greater ecosystem, that could be open source, or licensed or even a hybrid, with a paid support option.
 
 <img src=images/005-docker-terms.jpg />
 
@@ -145,7 +145,7 @@ List all containers:
 ```
 $ docker ps -a
 ```
-Notice that the hello-world container, ran once and then exited:
+Notice that the hello-world container ran once and then exited:
 
 <img src=images/2017-03-16_14-46-49.jpg />
 
@@ -177,14 +177,14 @@ $ docker run -d -p 80:80/tcp "karthequian/helloworld:latest"
 
 Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Host where it is running and note the number of visits: 
 
-> *Note - the IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http://localhost (for the rest of this document, it may just be referred to as host IP or docker host IP for simplicity)*
+> *Note - the IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http://localhost (for the rest of this document, it may just be referred to as host IP or Docker host IP for simplicity)*
 
 
 <img src=images/004-hello-world.png />
 
 ***
 
-You are now actually using an application that is in the Docker container.  Refresh the browser and observe how the visits counts increments.  This is a live application. A simple example, but an example of the experience of using an application running in a container, which is no different than if it was not running in a container.
+You are now actually using an application that is in the Docker container.  Refresh the browser and observe how the visits count increments.  This is a live application. A simple example, but an example of the experience of using an application running in a container, which is no different than if it was not running in a container.
 
 > *Makes you wonder about how many apps that you are using on a day to day basis, may indeed be running in a Docker container?*
 
@@ -409,7 +409,7 @@ Verify the images are removed from your host.  View all Docker images with the i
 $ docker images
 ```
 
-Now, run the image directly from your repository on Dockerhub, and force a new pull of the image, because the image does not exist locally:
+Now, run the image directly from your repository on Docker Hub, and force a new pull of the image, because the image does not exist locally:
 
 ```
 $ docker run username/docker-whale
@@ -697,20 +697,20 @@ $ docker rm $(docker ps -a -q)
 ***
 
 
-## Use Github and Docker Hub together to build an Image and Run the Container
+## Use GitHub and Docker Hub together to build an Image and Run the Container
 
-**Requirements: user account for Github and DockerHub**
+**Requirements: user account for GitHub and Docker Hub**
 
 > *Note - if you do not have a Github account, get a free one here: [https://github.com/join](https://github.com/join)* 
 
-Now, you will explore another method of creating a image using GitHub and Docker Hub.
+Now, you will explore another method of creating an image using GitHub and Docker Hub.
 
-> *Note - in this exercise you will fork an existing hello-world like repository, that you will call hello-earth, then modify its web page: Index.html in Github to trigger an automated Docker image build in Docker Hub.  You will then verify the successful build and run the image as a container in your Docker environment.*
+> *Note - in this exercise you will fork an existing hello-world like repository, that you will call hello-earth, then modify its web page: Index.html in GitHub to trigger an automated Docker image build in Docker Hub.  You will then verify the successful build and run the image as a container in your Docker environment.*
 
 
-**To begin, fork this Github Docker001 repo to your own**
+**To begin, fork this GitHub Docker001 repo to your own**
 
-Log into you Github account: 
+Log into you GitHub account: 
 
 https://github.com/login
 
@@ -792,7 +792,7 @@ Within the Build Settings tab, enter "/lab1" for the Dockerfile Location and pre
 
 ***
 
-Back in your Github account navigate to the URL where you have forked the above Docker001 repo, and specifically open the "lab1" folder.  Replace your Github username in the below URL.
+Back in your GitHub account navigate to the URL where you have forked the above Docker001 repo, and specifically open the "lab1" folder.  Replace your GitHub username in the below URL.
 
 https://github.com/*username*/docker001/tree/master/lab1
 
@@ -872,7 +872,7 @@ Check out running your container in the Oracle Container Cloud Service:
 
 ## Summary/Recap Pointer to Further Resources
 
-* [Oracle Github](https://github.com/oracle/docker-images)
+* [Oracle GitHub](https://github.com/oracle/docker-images)
 
 * [Oracle Container Registry](https://container-registry.oracle.com)
 
