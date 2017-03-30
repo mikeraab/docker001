@@ -53,14 +53,14 @@ Now, let's look at how a virtual machine (VM) is different from a container.
 
 While containers may sound like a VM, the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the **entire guest operating system.**
 
-Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.  
+Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on its host – allowing containers to run on almost any computer, infrastructure and cloud.  
 
 <img src=images/002-vm-vs-container.png />
 
 
 > *Note - at this time, Windows and Linux containers require that they run on their respective kernel base, therefore, Windows containers cannot run on Linux hosts and vice versa.*
 
-Docker images are a collection of files, which have everthing needed to run the software application inside the container.  However, they are ephemeral, meaning that any data that is written inside the container, while it is running, will not be retained.  
+Docker images are a collection of files, which have everything needed to run the software application inside the container.  However, they are ephemeral, meaning that any data that is written inside the container, while it is running, will not be retained.  
 
 If the container is stopped and restarted from its image, the container will run exactly the same as the first time, absent of any changes made during the last run cycle.  Changes to the container either have to be made during the image creation process, using the Dockerfile that become part of the image, or data can be retained by mounting a persistent storage volume, from inside the container to the outside.  This will be explored further in the HOL exercises below. 
 
@@ -79,12 +79,12 @@ The Docker Engine is THE core piece of technology that allows you to run contain
 <img src=images/004-docker-engine.jpg />
 
 
-Ok, so those are some of the mechanics of the technology, but why is Docker popular among all types of IT people?  Lets look at these proof points from Developers and IT Ops.
+Ok, so those are some of the mechanics of the technology, but why is Docker popular among all types of IT people?  Let's look at these proof points from Developers and IT Ops.
 
 <img src=images/004-why-containers.jpg />
 
 
-Additonally, in speaking with hundreds of organizations that are exploring and using Docker, these are the core advantages that Docker brings.  
+Additionally, in speaking with hundreds of organizations that are exploring and using Docker, these are the core advantages that Docker brings.  
 
 <img src=images/005-docker-usage.jpg />
 
@@ -99,7 +99,7 @@ All of this is part of a transformation of technologies along a number of fronts
 
 In this first section you are going to verify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](../master/Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
 
-> *Note - if you are using one of the Workder Nodes in an Oracle Container Cloud Service instance, as your Docker Engine environment, [access it via SSH per these instructions](../master/supplemental/Access-OCCS-VM-SSH.md)
+> *Note - if you are using one of the Worker Nodes in an Oracle Container Cloud Service instance, as your Docker Engine environment, [access it via SSH per these instructions](../master/supplemental/Access-OCCS-VM-SSH.md)
 
 **Optional** - for convenience, run as root, so that you do not have to preface everthing with sudo (not applicable if you are running Docker for Windows):
 
@@ -345,7 +345,7 @@ Notice the output in the terminal, the container will run once, then stop.
 
 Registries store Docker images.  Using a registry is the first step towards moving Docker off the laptop.  The most widely used registry is the Docker Hub: [https://hub.docker.com](https://hub.docker.com) 
 
-> *Note - in this exercise you will need a Docker Hub account to use the public Docker registry.  If you do not have one already, you can signup for free, navigate to: [https://hub.docker.com/](https://hub.docker.com/)*
+> *Note - in this exercise you will need a Docker Hub account to use the public Docker registry.  If you do not have one already, you can sign up for free, navigate to: [https://hub.docker.com/](https://hub.docker.com/)*
 
 **Tag and Push your new image to the Docker Hub registry.  In this exercise username will be your Docker Hub account name.**
 
