@@ -447,7 +447,7 @@ According to Docker: Docker Compose is a tool for defining and running multi-con
 
 Here is a synopsis of the steps in the above URL:
 
-> *For simplicity, we will install Docker Compose in the root home directory to avoid any path issues with the variety of Linux environments that may be used in this HOL.  This is also where you will run Docker Compose and create your first docker-compose.yml file.*
+> *For simplicity, you will install Docker Compose in the root home directory to avoid any path issues with the variety of Linux environments that may be used in this HOL.  This is also where you will run Docker Compose and create your first docker-compose.yml file.*
 
 
 ```
