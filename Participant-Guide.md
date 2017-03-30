@@ -256,7 +256,7 @@ We are done with this part of the HOL.
 
 ## Create a Dockerfile and Docker Image
 
-In this excercise you will build your own image from a Dockerfile.
+In this exercise you will build your own image from a Dockerfile.
 
 **About DockerFiles**
 
@@ -447,9 +447,8 @@ According to Docker: Docker Compose is a tool for defining and running multi-con
 
 Here is a synopsis of the steps in the above URL:
 
-Be sure that you are in your home directory, this is where you will create your first docker-compose.yml file:
+> *For simplicity, we will install Docker Compose in the root home directory to avoid any path issues with the variety of Linux environments that may be used in this HOL.  This is also where you will run Docker Compose and create your first docker-compose.yml file.*
 
-> *Note - you can use seperate sub-directories under your home directory, to store subsequent apps, each created with their own Docker Compose YAML file*
 
 ```
 $ cd ~
@@ -459,19 +458,19 @@ $ pwd
 
 Then, use this curl command to install Docker Compose:
 ```
-$ curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
 ```
 
 Change the executable permissions:
 
 ```
-$ chmod +x /usr/local/bin/docker-compose
+$ chmod +x docker-compose
 ```
 
 Verify and check which version of Docker Compose was installed:
 
 ```
-$ docker-compose --version
+$ ./docker-compose --version
 ```
 
 ***
@@ -536,7 +535,7 @@ esc : w q
 Run the Wordpress stack by this command:
 
 ```
-$ docker-compose up -d
+$ ./docker-compose up -d
 ```
 
 **Verify the running stack, by visiting the Wordpress setup page.**
@@ -686,7 +685,17 @@ Navigate back to the blog post URL that you noted, in your browser and refresh t
 
 The data persisted because it was written to the host volume, and then re-joined to the containers when they were re-deployed on the same hosts.
 
+
+Please Stop and Remove all containers before going to the next section:
+
+```
+$ docker stop $(docker ps -a -q)
+
+$ docker rm $(docker ps -a -q)
+```
+
 ***
+
 
 ## Use Github and Docker Hub together to build an Image and Run the Container
 
@@ -835,7 +844,7 @@ When you have a successful built, go back into your Docker CLI environment, run 
 $ docker run -d -p80:80 "username/hello-earth"
 ```
 
-Once the container is running, visit the docker host’s IP and observe your changes for a new hello-earth contianer that you just built and ran!
+Once the container is running, visit the docker host’s IP and observe your changes for a new hello-earth container that you just built and ran!
 
 <img src=images/github-dockerhub_15.jpg />
 
