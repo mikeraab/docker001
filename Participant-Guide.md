@@ -686,7 +686,7 @@ Navigate back to the blog post URL that you noted, in your browser and refresh t
 The data persisted because it was written to the host volume, and then re-joined to the containers when they were re-deployed on the same hosts.
 
 
-Please Stop and Remove all containers before going to the next section:
+**Please stop and remove all containers before going to the next section:**
 
 ```
 $ docker stop $(docker ps -a -q)
