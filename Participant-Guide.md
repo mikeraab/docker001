@@ -421,7 +421,7 @@ $ docker run username/docker-whale
 
 ***
 
-At this point please stop and remove all containers.  To do this for all containers, uses these commands:
+**At this point please stop and remove all containers.  To do this for all containers, uses these commands:**
 
 ```
 $ docker stop $(docker ps -a -q)
@@ -433,7 +433,7 @@ $ docker rm $(docker ps -a -q)
 
 ## Install Docker Compose
 
-> *Note - if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely, Docker Compose is installed.  To check if it is installed:*
+> *Note - if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely Docker Compose is already installed.  To check if it is installed:*
 
 ```
 $ docker-compose --version
