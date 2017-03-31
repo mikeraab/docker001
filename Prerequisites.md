@@ -18,7 +18,7 @@ The Docker Engine environment **needs to be completed prior to starting the Hand
 * Create a Linux VM with VirtualBox
 * [Install Docker Engine](https://docs.docker.com/engine/installation/linux/)
 
-* As an option for a VirtualBox VM: [Download a prebuilt OL7 VM (DOC-1002902.ova)](http://www.oracle.com/technetwork/server-storage/linux/downloads/vm-for-hol-1896500.html) | [Docs and Docker install](https://community.oracle.com/docs/DOC-1002902)
+* **As an option for a VirtualBox VM:** [Download a prebuilt OL7 VM (DOC-1002902.ova)](http://www.oracle.com/technetwork/server-storage/linux/downloads/vm-for-hol-1896500.html) | [Docs and Docker install](https://community.oracle.com/docs/DOC-1002902)
 
 ### Use Docker Engine on Windows:
 
