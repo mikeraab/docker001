@@ -433,7 +433,12 @@ $ docker rm $(docker ps -a -q)
 
 ## Install Docker Compose
 
-> *Note - if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely, Docker Compose is installed.*
+> *Note - if the Docker Engine setup you used was Docker for Windows or Docker for Mac, most likely, Docker Compose is installed.  To check if it is installed:*
+
+```
+$ docker-compose --version
+```
+
 
 **Introduction to Docker Compose**
 
